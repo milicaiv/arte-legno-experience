@@ -4,23 +4,23 @@ import { Leaf, Clock, Heart, Shield } from "lucide-react";
 const values = [
   {
     icon: Leaf,
-    title: "Sustainable",
-    description: "Ethically sourced wood from managed forests, respecting nature's rhythm and regeneration.",
+    title: "Održivo",
+    description: "Etički nabavljeno drvo iz kontrolisanih šuma, poštujući ritam i regeneraciju prirode.",
   },
   {
     icon: Clock,
-    title: "Slow Craft",
-    description: "Each piece takes its natural time. No rushing, no shortcuts—just patient dedication.",
+    title: "Spori Zanat",
+    description: "Svaki komad ima svoje prirodno vreme. Bez žurbe, bez prečica—samo strpljiva posvećenost.",
   },
   {
     icon: Heart,
-    title: "Soul & Passion",
-    description: "Every creation carries the essence of human touch, emotion, and artistic vision.",
+    title: "Duša i Strast",
+    description: "Svaka kreacija nosi suštinu ljudskog dodira, emocije i umetničke vizije.",
   },
   {
     icon: Shield,
-    title: "Built to Last",
-    description: "Designed for generations. Timeless aesthetics that transcend trends and time.",
+    title: "Stvoreno da Traje",
+    description: "Dizajnirano za generacije. Bezvremena estetika koja prevazilazi trendove i vreme.",
   },
 ];
 
@@ -30,12 +30,12 @@ export const CraftsmanshipSection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-muted-foreground mb-4 block">
-            Our Values
+            Naše Vrednosti
           </span>
           <h2 className="heading-section text-foreground max-w-2xl mx-auto">
-            Craftsmanship That
+            Zanatstvo Koje
             <br />
-            <span className="italic">Speaks to the Soul</span>
+            <span className="italic">Govori Duši</span>
           </h2>
         </AnimatedSection>
 

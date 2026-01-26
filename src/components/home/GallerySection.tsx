@@ -6,11 +6,11 @@ import productTable from "@/assets/product-table.jpg";
 import craftingHands from "@/assets/crafting-hands.jpg";
 
 const galleryImages = [
-  { src: woodTexture, alt: "Wood grain texture detail", span: "col-span-1 row-span-1" },
-  { src: productBowl, alt: "Handcrafted wooden bowl", span: "col-span-1 row-span-2" },
-  { src: workshopInterior, alt: "Woodworking workshop interior", span: "col-span-1 row-span-1" },
-  { src: productTable, alt: "Solid wood dining table", span: "col-span-2 row-span-1" },
-  { src: craftingHands, alt: "Craftsman's hands at work", span: "col-span-1 row-span-1" },
+  { src: woodTexture, alt: "Detalj teksture drveta", span: "col-span-1 row-span-1" },
+  { src: productBowl, alt: "Ručno izrađena drvena činija", span: "col-span-1 row-span-2" },
+  { src: workshopInterior, alt: "Enterijer stolarke radionice", span: "col-span-1 row-span-1" },
+  { src: productTable, alt: "Trpezarijski sto od punog drveta", span: "col-span-2 row-span-1" },
+  { src: craftingHands, alt: "Ruke majstora na poslu", span: "col-span-1 row-span-1" },
 ];
 
 export const GallerySection = () => {
@@ -19,12 +19,12 @@ export const GallerySection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-muted-foreground mb-4 block">
-            Visual Journey
+            Vizuelno Putovanje
           </span>
           <h2 className="heading-section text-foreground">
-            Textures, Moments,
+            Teksture, Trenuci,
             <br />
-            <span className="italic">Living Art</span>
+            <span className="italic">Živa Umetnost</span>
           </h2>
         </AnimatedSection>
 

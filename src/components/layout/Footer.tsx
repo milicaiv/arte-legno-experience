@@ -17,21 +17,26 @@ export const Footer = () => {
               </span>
             </div>
             <p className="body-regular text-primary-foreground/80 max-w-sm leading-relaxed">
-              Where wood becomes art. Handcrafted with soul, designed for generations.
+              Gde drvo postaje umetnost. Ručno izrađeno s dušom, dizajnirano za generacije.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="label-text mb-6 text-primary-foreground/70">Navigation</h4>
+            <h4 className="label-text mb-6 text-primary-foreground/70">Navigacija</h4>
             <ul className="space-y-3">
-              {["Home", "About", "Blog", "Contact"].map((item) => (
-                <li key={item}>
+              {[
+                { name: "Početna", path: "/" },
+                { name: "O nama", path: "/about" },
+                { name: "Blog", path: "/blog" },
+                { name: "Kontakt", path: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
                   <Link
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    to={item.path}
                     className="body-regular text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 link-underline"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -40,7 +45,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="label-text mb-6 text-primary-foreground/70">Connect</h4>
+            <h4 className="label-text mb-6 text-primary-foreground/70">Povežite se</h4>
             <div className="flex gap-4 mb-6">
               <a
                 href="#"
@@ -73,10 +78,10 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} ATLAGIĆ — ARTE LEGNO. All rights reserved.
+            © {new Date().getFullYear()} ATLAGIĆ — ARTE LEGNO. Sva prava zadržana.
           </p>
           <p className="text-sm text-primary-foreground/60 italic">
-            Crafted with patience and love for wood.
+            Izrađeno sa strpljenjem i ljubavlju prema drvetu.
           </p>
         </div>
       </div>

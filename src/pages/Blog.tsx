@@ -8,51 +8,51 @@ import productBowl from "@/assets/product-bowl.jpg";
 import productTable from "@/assets/product-table.jpg";
 import heroWorkshop from "@/assets/hero-workshop.jpg";
 
-const categories = ["All", "Philosophy", "Behind the Scenes", "Sustainability", "Craft Process"];
+const categories = ["Sve", "Filozofija", "Iza Scene", "Održivost", "Proces Izrade"];
 
 const posts = [
   {
     image: woodTexture,
-    category: "Philosophy",
-    title: "The Language of Wood Grain",
-    excerpt: "Understanding the stories that every piece of wood tells through its unique patterns and how we learn to read them.",
-    date: "January 2026",
+    category: "Filozofija",
+    title: "Jezik Teksture Drveta",
+    excerpt: "Razumevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare i kako učimo da ih čitamo.",
+    date: "Januar 2026",
     featured: true,
   },
   {
     image: workshopInterior,
-    category: "Behind the Scenes",
-    title: "A Day in the Workshop",
-    excerpt: "The rhythm of handcraft—from dawn's first light to the final polish of the day.",
-    date: "January 2026",
+    category: "Iza Scene",
+    title: "Dan u Radionici",
+    excerpt: "Ritam ručnog zanata—od prvog svetla zore do poslednjeg poliranja dana.",
+    date: "Januar 2026",
   },
   {
     image: craftingHands,
-    category: "Sustainability",
-    title: "Respecting Nature's Timeline",
-    excerpt: "Why slow craftsmanship and sustainability are inseparable values in our practice.",
-    date: "December 2025",
+    category: "Održivost",
+    title: "Poštovanje Ritma Prirode",
+    excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrednosti u našoj praksi.",
+    date: "Decembar 2025",
   },
   {
     image: productBowl,
-    category: "Craft Process",
-    title: "The Art of Wood Turning",
-    excerpt: "A meditative practice that transforms raw timber into flowing, organic forms.",
-    date: "December 2025",
+    category: "Proces Izrade",
+    title: "Umetnost Struganja Drveta",
+    excerpt: "Meditativna praksa koja pretvara sirovu građu u tečne, organske forme.",
+    date: "Decembar 2025",
   },
   {
     image: productTable,
-    category: "Philosophy",
-    title: "Tables That Gather",
-    excerpt: "On designing furniture that becomes the heart of family life and conversation.",
-    date: "November 2025",
+    category: "Filozofija",
+    title: "Stolovi Koji Okupljaju",
+    excerpt: "O dizajniranju nameštaja koji postaje srce porodičnog života i razgovora.",
+    date: "Novembar 2025",
   },
   {
     image: heroWorkshop,
-    category: "Behind the Scenes",
-    title: "Tools of the Trade",
-    excerpt: "The hand tools passed down through generations and their irreplaceable role.",
-    date: "November 2025",
+    category: "Iza Scene",
+    title: "Alati Zanata",
+    excerpt: "Ručni alati prenošeni kroz generacije i njihova nezamenljiva uloga.",
+    date: "Novembar 2025",
   },
 ];
 
@@ -72,16 +72,16 @@ const Blog = () => {
             className="text-center"
           >
             <span className="label-text text-muted-foreground mb-4 block">
-              Stories from the Workshop
+              Priče iz Radionice
             </span>
             <h1 className="heading-display text-foreground mb-6">
-              <span className="italic">Reflections</span> on
+              <span className="italic">Razmišljanja</span> o
               <br />
-              Wood & Craft
+              Drvetu i Zanatu
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Thoughts, stories, and insights from a life dedicated to the art 
-              of handcrafted wood.
+              Misli, priče i uvidi iz života posvećenog umetnosti 
+              ručno izrađenog drveta.
             </p>
           </motion.div>
         </div>
@@ -125,7 +125,7 @@ const Blog = () => {
                 </div>
                 <div>
                   <span className="label-text text-wood-medium mb-4 block">
-                    Featured • {featuredPost.category}
+                    Istaknuto • {featuredPost.category}
                   </span>
                   <h2 className="heading-subsection text-foreground mb-4 group-hover:text-wood-medium transition-colors duration-300">
                     {featuredPost.title}
@@ -182,23 +182,23 @@ const Blog = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-subsection text-foreground mb-4">
-              Stories Delivered to <span className="italic">Your Inbox</span>
+              Priče Dostavljene u <span className="italic">Vaš Inbox</span>
             </h2>
             <p className="body-regular text-muted-foreground mb-8 max-w-md mx-auto">
-              Join our community and receive occasional reflections on wood, 
-              craft, and the art of slow making.
+              Pridružite se našoj zajednici i primajte povremena razmišljanja o drvetu, 
+              zanatu i umetnosti sporog stvaranja.
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder="Vaša email adresa"
                 className="flex-grow px-5 py-4 bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
               />
               <button
                 type="submit"
                 className="px-8 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide transition-all duration-300 hover:bg-wood-medium"
               >
-                Subscribe
+                Pretplatite se
               </button>
             </form>
           </AnimatedSection>

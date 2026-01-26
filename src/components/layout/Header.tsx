@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
+  { name: "Početna", path: "/" },
+  { name: "O nama", path: "/about" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
+  { name: "Kontakt", path: "/contact" },
 ];
 
 export const Header = () => {
@@ -72,7 +72,7 @@ export const Header = () => {
             to="/contact"
             className="hidden md:inline-flex px-6 py-3 bg-primary text-primary-foreground text-sm font-medium tracking-wide transition-all duration-300 hover:bg-wood-medium"
           >
-            Contact Us
+            Kontaktirajte nas
           </Link>
 
           {/* Mobile Menu Button */}
@@ -131,7 +131,7 @@ export const Header = () => {
                   to="/contact"
                   className="mt-4 px-8 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide"
                 >
-                  Contact Us
+                  Kontaktirajte nas
                 </Link>
               </motion.div>
             </motion.nav>
