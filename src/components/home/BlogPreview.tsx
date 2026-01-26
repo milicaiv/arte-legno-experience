@@ -8,24 +8,24 @@ import craftingHands from "@/assets/crafting-hands.jpg";
 const posts = [
   {
     image: woodTexture,
-    category: "Philosophy",
-    title: "The Language of Wood Grain",
-    excerpt: "Understanding the stories that every piece of wood tells through its unique patterns.",
-    slug: "language-of-wood-grain",
+    category: "Filozofija",
+    title: "Jezik Teksture Drveta",
+    excerpt: "Razumevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare.",
+    slug: "jezik-teksture-drveta",
   },
   {
     image: workshopInterior,
-    category: "Behind the Scenes",
-    title: "A Day in the Workshop",
-    excerpt: "The rhythm of handcraft—from dawn's first light to the final polish.",
-    slug: "day-in-workshop",
+    category: "Iza Scene",
+    title: "Dan u Radionici",
+    excerpt: "Ritam ručnog zanata—od prvog svetla zore do poslednjeg poliranja.",
+    slug: "dan-u-radionici",
   },
   {
     image: craftingHands,
-    category: "Sustainability",
-    title: "Respecting Nature's Timeline",
-    excerpt: "Why slow craftsmanship and sustainability are inseparable values.",
-    slug: "respecting-nature-timeline",
+    category: "Održivost",
+    title: "Poštovanje Ritma Prirode",
+    excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrednosti.",
+    slug: "postovanje-ritma-prirode",
   },
 ];
 
@@ -36,17 +36,17 @@ export const BlogPreview = () => {
         <AnimatedSection className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="label-text text-muted-foreground mb-4 block">
-              Stories from the Workshop
+              Priče iz Radionice
             </span>
             <h2 className="heading-section text-foreground">
-              Latest <span className="italic">Reflections</span>
+              Najnovija <span className="italic">Razmišljanja</span>
             </h2>
           </div>
           <Link
             to="/blog"
             className="inline-flex items-center gap-2 text-foreground font-medium tracking-wide link-underline"
           >
-            View All Stories
+            Pogledajte Sve Priče
             <ArrowRight size={16} />
           </Link>
         </AnimatedSection>

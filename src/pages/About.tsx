@@ -12,37 +12,37 @@ import { TreeDeciduous, Compass, Hand, Sparkles, Shield } from "lucide-react";
 const services = [
   {
     icon: TreeDeciduous,
-    title: "Custom Wood Furniture",
-    description: "Bespoke tables, chairs, and cabinets crafted to your exact vision and space.",
+    title: "Nameštaj po Meri",
+    description: "Stolovi, stolice i ormari izrađeni prema vašoj tačnoj viziji i prostoru.",
   },
   {
     icon: Compass,
-    title: "Art Wood Objects",
-    description: "Sculptural pieces that blur the line between furniture and fine art.",
+    title: "Umetnički Drveni Predmeti",
+    description: "Skulpturalni komadi koji brišu granicu između nameštaja i umetnosti.",
   },
   {
     icon: Hand,
-    title: "Interior Wood Design",
-    description: "Complete wood interior solutions—from wall panels to custom built-ins.",
+    title: "Enterijerski Dizajn od Drveta",
+    description: "Kompletna drvena rešenja za enterijer—od zidnih panela do ugradbenog nameštaja.",
   },
   {
     icon: Sparkles,
-    title: "Unique Handmade Gifts",
-    description: "Personal, meaningful gifts crafted with intention for special moments.",
+    title: "Jedinstveni Ručni Pokloni",
+    description: "Lični, značajni pokloni izrađeni s namerom za posebne trenutke.",
   },
   {
     icon: Shield,
-    title: "Bespoke Projects",
-    description: "Complex commissions that push the boundaries of wood craftsmanship.",
+    title: "Projekti po Narudžbini",
+    description: "Kompleksne narudžbine koje pomeraju granice drvenog zanatstva.",
   },
 ];
 
 const process = [
-  { step: "01", title: "Selecting the Wood", description: "We source ethically from sustainable forests, choosing each piece for its unique character." },
-  { step: "02", title: "Understanding Its Story", description: "Reading the grain, sensing the potential, imagining what it wants to become." },
-  { step: "03", title: "Designing with Nature", description: "Collaborating with the wood's natural form to create harmonious designs." },
-  { step: "04", title: "Hand Crafting", description: "Patient, precise work—each cut, joint, and curve shaped by experienced hands." },
-  { step: "05", title: "Finishing & Protection", description: "Natural oils and finishes that enhance beauty while preserving for generations." },
+  { step: "01", title: "Odabir Drveta", description: "Nabavljamo etički iz održivih šuma, birajući svaki komad zbog njegovog jedinstvenog karaktera." },
+  { step: "02", title: "Razumevanje Njegove Priče", description: "Čitamo teksturu, osećamo potencijal, zamišljamo šta želi da postane." },
+  { step: "03", title: "Dizajniranje s Prirodom", description: "Sarađujemo s prirodnim oblikom drveta da bismo stvorili harmonične dizajne." },
+  { step: "04", title: "Ručna Izrada", description: "Strpljiv, precizan rad—svaki rez, spoj i kriva oblikovani iskusnim rukama." },
+  { step: "05", title: "Završna Obrada i Zaštita", description: "Prirodna ulja i završne obrade koje pojačavaju lepotu dok čuvaju za generacije." },
 ];
 
 const About = () => {
@@ -58,15 +58,15 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <span className="label-text text-muted-foreground mb-4 block">
-                Our Story
+                Naša Priča
               </span>
               <h1 className="heading-display text-foreground mb-6">
-                A Life Dedicated to
+                Život Posvećen
                 <br />
-                <span className="italic">Wood & Craft</span>
+                <span className="italic">Drvetu i Zanatu</span>
               </h1>
               <p className="body-large text-muted-foreground">
-                Where passion meets patience, and every grain tells a story.
+                Gde se strast susreće sa strpljenjem, i svaka tekstura priča priču.
               </p>
             </motion.div>
             <motion.div
@@ -78,7 +78,7 @@ const About = () => {
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={founderImage}
-                  alt="The founder and master craftsman"
+                  alt="Osnivač i majstor zanatstva"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -92,10 +92,10 @@ const About = () => {
         <div className="container-narrow px-6 md:px-12">
           <AnimatedSection className="text-center mb-16">
             <span className="label-text text-muted-foreground mb-4 block">
-              The Beginning
+              Početak
             </span>
             <h2 className="heading-section text-foreground mb-8">
-              How It All <span className="italic">Started</span>
+              Kako Je Sve <span className="italic">Počelo</span>
             </h2>
           </AnimatedSection>
           
@@ -104,7 +104,7 @@ const About = () => {
               <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={workshopImage}
-                  alt="The workshop where it all began"
+                  alt="Radionica gde je sve počelo"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -113,23 +113,23 @@ const About = () => {
             <AnimatedSection delay={0.2}>
               <div className="space-y-6">
                 <p className="body-large text-foreground leading-relaxed">
-                  It began in my grandfather's workshop—the smell of oak shavings, 
-                  the rhythm of hand planes, the patience of a man who spoke to 
-                  wood as if it were alive.
+                  Sve je počelo u dedinoj radionici—miris hrastovih strugotina, 
+                  ritam ručnih blanja, strpljenje čoveka koji je razgovarao sa 
+                  drvetom kao da je živo.
                 </p>
                 <p className="body-regular text-muted-foreground leading-relaxed">
-                  Those early years shaped everything. I learned that wood isn't just 
-                  material—it's a living archive of time, weather, and growth. Each 
-                  ring tells of a year lived. Each knot holds a memory.
+                  Te rane godine su oblikovale sve. Naučio sam da drvo nije samo 
+                  materijal—to je živi arhiv vremena, vremenskih prilika i rasta. Svaki 
+                  prsten govori o godini života. Svaki čvor čuva sećanje.
                 </p>
                 <p className="body-regular text-muted-foreground leading-relaxed">
-                  ATLAGIĆ — ARTE LEGNO was born from a simple belief: in our fast world, 
-                  there's profound value in things made slowly, with care, with soul. 
-                  Things that will outlive us and carry forward the warmth of human touch.
+                  ATLAGIĆ — ARTE LEGNO je rođen iz jednostavnog uverenja: u našem brzom svetu, 
+                  postoji duboka vrednost u stvarima napravljenim polako, sa pažnjom, sa dušom. 
+                  Stvari koje će nas nadživeti i preneti toplinu ljudskog dodira.
                 </p>
                 <p className="body-regular text-muted-foreground leading-relaxed italic">
-                  Today, twenty years later, that same philosophy guides every piece 
-                  that leaves our workshop.
+                  Danas, dvadeset godina kasnije, ta ista filozofija vodi svaki komad 
+                  koji napušta našu radionicu.
                 </p>
               </div>
             </AnimatedSection>
@@ -142,10 +142,10 @@ const About = () => {
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <AnimatedSection className="text-center mb-16">
             <span className="label-text text-muted-foreground mb-4 block">
-              What We Create
+              Šta Stvaramo
             </span>
             <h2 className="heading-section text-foreground">
-              Our <span className="italic">Services</span>
+              Naše <span className="italic">Usluge</span>
             </h2>
           </AnimatedSection>
 
@@ -168,10 +168,10 @@ const About = () => {
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <AnimatedSection className="text-center mb-16">
             <span className="label-text text-primary-foreground/70 mb-4 block">
-              The Journey
+              Putovanje
             </span>
             <h2 className="heading-section">
-              From Tree to <span className="italic">Treasure</span>
+              Od Drveta do <span className="italic">Blaga</span>
             </h2>
           </AnimatedSection>
 
@@ -200,7 +200,7 @@ const About = () => {
         <div className="flex gap-4 animate-[slide_30s_linear_infinite]">
           {[productTable, craftingHands, productBowl, workshopImage].map((img, index) => (
             <div key={index} className="flex-shrink-0 w-80 h-60 overflow-hidden">
-              <img src={img} alt="Craftsmanship" className="w-full h-full object-cover" />
+              <img src={img} alt="Zanatstvo" className="w-full h-full object-cover" />
             </div>
           ))}
         </div>
@@ -211,19 +211,19 @@ const About = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-section text-foreground mb-6">
-              Ready to Begin
+              Spremni da Započnete
               <br />
-              <span className="italic">Your Project?</span>
+              <span className="italic">Vaš Projekat?</span>
             </h2>
             <p className="body-large text-muted-foreground mb-10 max-w-xl mx-auto">
-              Every masterpiece starts with a conversation. Share your vision, 
-              and let's create something extraordinary together.
+              Svako remek-delo počinje razgovorom. Podelite svoju viziju, 
+              i hajde da zajedno stvorimo nešto izvanredno.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
             >
-              Start Your Custom Project
+              Započnite Vaš Projekat
             </Link>
           </AnimatedSection>
         </div>

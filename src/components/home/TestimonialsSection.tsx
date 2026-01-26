@@ -3,19 +3,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Each piece feels alive. You can feel the soul of the wood and the passion of the craftsman.",
+    quote: "Svaki komad deluje živo. Možete osetiti dušu drveta i strast majstora.",
     author: "Elena M.",
-    location: "Milan, Italy",
+    location: "Milano, Italija",
   },
   {
-    quote: "True craftsmanship that brings warmth into our home. It's not furniture—it's a living presence.",
-    author: "Marcus K.",
-    location: "Vienna, Austria",
+    quote: "Pravo zanatstvo koje donosi toplinu u naš dom. To nije nameštaj—to je živo prisustvo.",
+    author: "Marko K.",
+    location: "Beč, Austrija",
   },
   {
-    quote: "The attention to detail is extraordinary. Our table has become the heart of family gatherings.",
-    author: "Sofia R.",
-    location: "Barcelona, Spain",
+    quote: "Pažnja posvećena detaljima je izvanredna. Naš sto je postao srce porodičnih okupljanja.",
+    author: "Sofija R.",
+    location: "Barselona, Španija",
   },
 ];
 
@@ -25,12 +25,12 @@ export const TestimonialsSection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-primary-foreground/70 mb-4 block">
-            Words from Our Clients
+            Reči Naših Klijenata
           </span>
           <h2 className="heading-section">
-            Stories of
+            Priče o
             <br />
-            <span className="italic">Connection</span>
+            <span className="italic">Povezanosti</span>
           </h2>
         </AnimatedSection>
 

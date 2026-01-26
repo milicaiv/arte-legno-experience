@@ -9,7 +9,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0">
         <motion.img
           src={heroImage}
-          alt="Artisan craftsman working with wood"
+          alt="Majstor zanatstva radi sa drvetom"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -28,7 +28,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="label-text text-cream/80 mb-6 block"
           >
-            Handcrafted Wood Art
+            Ručno Izrađena Umetnost od Drveta
           </motion.span>
 
           <motion.h1
@@ -37,9 +37,9 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="heading-display text-cream mb-6"
           >
-            Where Wood
+            Gde Drvo
             <br />
-            <span className="italic">Becomes Art</span>
+            <span className="italic">Postaje Umetnost</span>
           </motion.h1>
 
           <motion.p
@@ -48,9 +48,9 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="body-large text-cream/80 max-w-xl mb-10"
           >
-            Timeless craft. Living material. Authentic design.
+            Bezvremeni zanat. Živi materijal. Autentičan dizajn.
             <br />
-            Each piece tells a story of patience, texture, and respect for nature.
+            Svaki komad priča priču o strpljenju, teksturi i poštovanju prema prirodi.
           </motion.p>
 
           <motion.div
@@ -63,13 +63,13 @@ export const HeroSection = () => {
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-cream text-charcoal text-sm font-medium tracking-wide transition-all duration-300 hover:bg-cream-dark"
             >
-              Request Custom Piece
+              Naručite Jedinstveni Komad
             </Link>
             <Link
               to="/about"
               className="inline-flex items-center justify-center px-8 py-4 border border-cream/50 text-cream text-sm font-medium tracking-wide transition-all duration-300 hover:bg-cream/10"
             >
-              Our Story
+              Naša Priča
             </Link>
           </motion.div>
         </div>
@@ -82,7 +82,7 @@ export const HeroSection = () => {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-cream/60 text-xs tracking-widest uppercase">Scroll</span>
+        <span className="text-cream/60 text-xs tracking-widest uppercase">Skroluj</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

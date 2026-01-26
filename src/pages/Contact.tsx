@@ -35,16 +35,16 @@ const Contact = () => {
             className="text-center"
           >
             <span className="label-text text-muted-foreground mb-4 block">
-              Begin the Conversation
+              Započnite Razgovor
             </span>
             <h1 className="heading-display text-foreground mb-6">
-              Every Piece Begins
+              Svaki Komad Počinje
               <br />
-              <span className="italic">With a Story</span>
+              <span className="italic">Sa Pričom</span>
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Share your vision, your needs, your dreams. Together, we'll create 
-              something that will be treasured for generations.
+              Podelite svoju viziju, svoje potrebe, svoje snove. Zajedno ćemo stvoriti 
+              nešto što će biti cenjeno generacijama.
             </p>
           </motion.div>
         </div>
@@ -60,7 +60,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="label-text text-muted-foreground block mb-2">
-                      Your Name
+                      Vaše Ime
                     </label>
                     <input
                       type="text"
@@ -69,12 +69,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      placeholder="John Smith"
+                      placeholder="Petar Petrović"
                     />
                   </div>
                   <div>
                     <label className="label-text text-muted-foreground block mb-2">
-                      Email Address
+                      Email Adresa
                     </label>
                     <input
                       type="email"
@@ -83,14 +83,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      placeholder="john@example.com"
+                      placeholder="petar@primer.com"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="label-text text-muted-foreground block mb-2">
-                    Subject
+                    Tema
                   </label>
                   <select
                     name="subject"
@@ -99,18 +99,18 @@ const Contact = () => {
                     required
                     className="w-full px-5 py-4 bg-transparent border border-border text-foreground focus:outline-none focus:border-primary transition-colors duration-300 appearance-none cursor-pointer"
                   >
-                    <option value="">Select a topic...</option>
-                    <option value="custom-furniture">Custom Furniture</option>
-                    <option value="art-objects">Art Wood Objects</option>
-                    <option value="interior-design">Interior Wood Design</option>
-                    <option value="gifts">Handmade Gifts</option>
-                    <option value="other">Other Inquiry</option>
+                    <option value="">Izaberite temu...</option>
+                    <option value="custom-furniture">Nameštaj po Meri</option>
+                    <option value="art-objects">Umetnički Drveni Predmeti</option>
+                    <option value="interior-design">Enterijerski Dizajn od Drveta</option>
+                    <option value="gifts">Ručni Pokloni</option>
+                    <option value="other">Ostali Upiti</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="label-text text-muted-foreground block mb-2">
-                    Your Message
+                    Vaša Poruka
                   </label>
                   <textarea
                     name="message"
@@ -119,7 +119,7 @@ const Contact = () => {
                     required
                     rows={6}
                     className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
-                    placeholder="Tell us about your project, your space, your vision..."
+                    placeholder="Recite nam o svom projektu, prostoru, viziji..."
                   />
                 </div>
 
@@ -127,7 +127,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full md:w-auto px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
                 >
-                  Send Message
+                  Pošaljite Poruku
                 </button>
               </form>
             </AnimatedSection>
@@ -138,32 +138,32 @@ const Contact = () => {
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={workshopImage}
-                  alt="Our workshop"
+                  alt="Naša radionica"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <h3 className="font-serif text-2xl text-foreground">Visit the Workshop</h3>
+                <h3 className="font-serif text-2xl text-foreground">Posetite Radionicu</h3>
                 <div className="flex items-start gap-4">
                   <MapPin size={20} className="text-wood-medium mt-1 flex-shrink-0" />
                   <div>
                     <p className="body-regular text-foreground">ATLAGIĆ — ARTE LEGNO</p>
                     <p className="body-regular text-muted-foreground">
-                      Via del Legno, 42<br />
-                      20100 Milano, Italy
+                      Ulica Majstora 42<br />
+                      11000 Beograd, Srbija
                     </p>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground italic">
-                  Workshop visits by appointment only.
+                  Posete radionici samo uz prethodni dogovor.
                 </p>
               </div>
 
               {/* Social */}
               <div className="space-y-4">
-                <h3 className="font-serif text-xl text-foreground">Connect</h3>
+                <h3 className="font-serif text-xl text-foreground">Povežite se</h3>
                 <div className="flex gap-4">
                   <a
                     href="#"
@@ -198,11 +198,11 @@ const Contact = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground leading-relaxed">
-              "The best time to plant a tree was twenty years ago.
+              "Najbolje vreme da posadite drvo bilo je pre dvadeset godina.
               <br />
-              The second best time is now."
+              Drugo najbolje vreme je sada."
             </blockquote>
-            <p className="mt-6 text-sm text-muted-foreground">— Ancient Proverb</p>
+            <p className="mt-6 text-sm text-muted-foreground">— Drevna poslovica</p>
           </AnimatedSection>
         </div>
       </section>

@@ -13,13 +13,13 @@ export const AboutPreview = () => {
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={founderImage}
-                  alt="The craftsman in his workshop"
+                  alt="Majstor u svojoj radionici"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary flex items-center justify-center">
                 <span className="font-serif text-3xl text-foreground">20+</span>
-                <span className="text-xs text-muted-foreground ml-1">Years</span>
+                <span className="text-xs text-muted-foreground ml-1">Godina</span>
               </div>
             </div>
           </AnimatedSection>
@@ -27,30 +27,30 @@ export const AboutPreview = () => {
           {/* Content */}
           <AnimatedSection direction="right" delay={0.2}>
             <span className="label-text text-muted-foreground mb-4 block">
-              Our Philosophy
+              Naša Filozofija
             </span>
             <h2 className="heading-section mb-6 text-foreground">
-              The Art of Slow
+              Umetnost Sporog
               <br />
-              <span className="italic">Craftsmanship</span>
+              <span className="italic">Zanatstva</span>
             </h2>
             <div className="space-y-4 mb-8">
               <p className="body-large text-muted-foreground">
-                In a world of mass production, we chose a different path. Each piece begins 
-                with a conversation between the craftsman and the wood—understanding its 
-                grain, its character, its story.
+                U svetu masovne proizvodnje, mi smo izabrali drugačiji put. Svaki komad 
+                počinje razgovorom između majstora i drveta—razumevanjem njegove 
+                teksture, karaktera, priče.
               </p>
               <p className="body-regular text-muted-foreground">
-                Founded on the belief that true beauty takes time, ATLAGIĆ — ARTE LEGNO 
-                creates handcrafted wood pieces that carry the warmth of human touch and 
-                the wisdom of nature. We don't just make furniture; we create heirlooms.
+                Osnovan na uverenju da prava lepota zahteva vreme, ATLAGIĆ — ARTE LEGNO 
+                stvara ručno izrađene drvene komade koji nose toplinu ljudskog dodira i 
+                mudrost prirode. Mi ne pravimo samo nameštaj; stvaramo nasleđe.
               </p>
             </div>
             <Link
               to="/about"
               className="inline-flex items-center text-foreground font-medium tracking-wide link-underline"
             >
-              Discover Our Story
+              Otkrijte Našu Priču
             </Link>
           </AnimatedSection>
         </div>
