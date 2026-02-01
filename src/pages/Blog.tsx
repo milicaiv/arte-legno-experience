@@ -15,7 +15,7 @@ const posts = [
     image: woodTexture,
     category: "Filozofija",
     title: "Jezik Teksture Drveta",
-    excerpt: "Razumevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare i kako učimo da ih čitamo.",
+    excerpt: "Razumijevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare i kako učimo da ih čitamo.",
     date: "Januar 2026",
     featured: true,
   },
@@ -23,20 +23,20 @@ const posts = [
     image: workshopInterior,
     category: "Iza Scene",
     title: "Dan u Radionici",
-    excerpt: "Ritam ručnog zanata—od prvog svetla zore do poslednjeg poliranja dana.",
+    excerpt: "Ritam ručnog zanata—od prvog svjetla zore do posljednjeg poliranja dana.",
     date: "Januar 2026",
   },
   {
     image: craftingHands,
     category: "Održivost",
     title: "Poštovanje Ritma Prirode",
-    excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrednosti u našoj praksi.",
+    excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrijednosti u našoj praksi.",
     date: "Decembar 2025",
   },
   {
     image: productBowl,
     category: "Proces Izrade",
-    title: "Umetnost Struganja Drveta",
+    title: "Umjetnost Struganja Drveta",
     excerpt: "Meditativna praksa koja pretvara sirovu građu u tečne, organske forme.",
     date: "Decembar 2025",
   },
@@ -44,14 +44,14 @@ const posts = [
     image: productTable,
     category: "Filozofija",
     title: "Stolovi Koji Okupljaju",
-    excerpt: "O dizajniranju nameštaja koji postaje srce porodičnog života i razgovora.",
+    excerpt: "O dizajniranju namještaja koji postaje srce porodičnog života i razgovora.",
     date: "Novembar 2025",
   },
   {
     image: heroWorkshop,
     category: "Iza Scene",
     title: "Alati Zanata",
-    excerpt: "Ručni alati prenošeni kroz generacije i njihova nezamenljiva uloga.",
+    excerpt: "Ručni alati prenošeni kroz generacije i njihova nezamjenjiva uloga.",
     date: "Novembar 2025",
   },
 ];
@@ -80,7 +80,7 @@ const Blog = () => {
               Drvetu i Zanatu
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Misli, priče i uvidi iz života posvećenog umetnosti 
+              Misli, priče i uvidi iz života posvećenog umjetnosti 
               ručno izrađenog drveta.
             </p>
           </motion.div>
@@ -186,7 +186,7 @@ const Blog = () => {
             </h2>
             <p className="body-regular text-muted-foreground mb-8 max-w-md mx-auto">
               Pridružite se našoj zajednici i primajte povremena razmišljanja o drvetu, 
-              zanatu i umetnosti sporog stvaranja.
+              zanatu i umjetnosti sporog stvaranja.
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

@@ -24,7 +24,7 @@ export const GallerySection = () => {
           <h2 className="heading-section text-foreground">
             Teksture, Trenuci,
             <br />
-            <span className="italic">Živa Umetnost</span>
+            <span className="italic">Živa Umjetnost</span>
           </h2>
         </AnimatedSection>
 

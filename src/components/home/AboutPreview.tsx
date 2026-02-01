@@ -30,20 +30,20 @@ export const AboutPreview = () => {
               Naša Filozofija
             </span>
             <h2 className="heading-section mb-6 text-foreground">
-              Umetnost Sporog
+              Umjetnost Sporog
               <br />
               <span className="italic">Zanatstva</span>
             </h2>
             <div className="space-y-4 mb-8">
               <p className="body-large text-muted-foreground">
-                U svetu masovne proizvodnje, mi smo izabrali drugačiji put. Svaki komad 
-                počinje razgovorom između majstora i drveta—razumevanjem njegove 
+                U svijetu masovne proizvodnje, mi smo izabrali drugačiji put. Svaki komad 
+                počinje razgovorom između majstora i drveta—razumijevanjem njegove 
                 teksture, karaktera, priče.
               </p>
               <p className="body-regular text-muted-foreground">
-                Osnovan na uverenju da prava lepota zahteva vreme, ATLAGIĆ — ARTE LEGNO 
+                Osnovan na uvjerenju da prava ljepota zahtijeva vrijeme, ATLAGIĆ — ARTE LEGNO 
                 stvara ručno izrađene drvene komade koji nose toplinu ljudskog dodira i 
-                mudrost prirode. Mi ne pravimo samo nameštaj; stvaramo nasleđe.
+                mudrost prirode. Mi ne pravimo samo namještaj; stvaramo nasljeđe.
               </p>
             </div>
             <Link

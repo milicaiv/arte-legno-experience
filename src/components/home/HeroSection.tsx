@@ -28,7 +28,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="label-text text-cream/80 mb-6 block"
           >
-            Ručno Izrađena Umetnost od Drveta
+            Ručno Izrađena Umjetnost od Drveta
           </motion.span>
 
           <motion.h1
@@ -37,9 +37,9 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="heading-display text-cream mb-6"
           >
-            Gde Drvo
+            Gdje Drvo
             <br />
-            <span className="italic">Postaje Umetnost</span>
+            <span className="italic">Postaje Umjetnost</span>
           </motion.h1>
 
           <motion.p

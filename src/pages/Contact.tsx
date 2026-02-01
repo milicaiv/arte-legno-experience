@@ -43,8 +43,8 @@ const Contact = () => {
               <span className="italic">Sa Pričom</span>
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Podelite svoju viziju, svoje potrebe, svoje snove. Zajedno ćemo stvoriti 
-              nešto što će biti cenjeno generacijama.
+              Podijelite svoju viziju, svoje potrebe, svoje snove. Zajedno ćemo stvoriti 
+              nešto što će biti cijenjeno generacijama.
             </p>
           </motion.div>
         </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      placeholder="petar@primer.com"
+                      placeholder="petar@primjer.com"
                     />
                   </div>
                 </div>
@@ -100,8 +100,8 @@ const Contact = () => {
                     className="w-full px-5 py-4 bg-transparent border border-border text-foreground focus:outline-none focus:border-primary transition-colors duration-300 appearance-none cursor-pointer"
                   >
                     <option value="">Izaberite temu...</option>
-                    <option value="custom-furniture">Nameštaj po Meri</option>
-                    <option value="art-objects">Umetnički Drveni Predmeti</option>
+                    <option value="custom-furniture">Namještaj po Mjeri</option>
+                    <option value="art-objects">Umjetnički Drveni Predmeti</option>
                     <option value="interior-design">Enterijerski Dizajn od Drveta</option>
                     <option value="gifts">Ručni Pokloni</option>
                     <option value="other">Ostali Upiti</option>
@@ -145,7 +145,7 @@ const Contact = () => {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <h3 className="font-serif text-2xl text-foreground">Posetite Radionicu</h3>
+                <h3 className="font-serif text-2xl text-foreground">Posjetite Radionicu</h3>
                 <div className="flex items-start gap-4">
                   <MapPin size={20} className="text-wood-medium mt-1 flex-shrink-0" />
                   <div>
@@ -157,7 +157,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground italic">
-                  Posete radionici samo uz prethodni dogovor.
+                  Posjete radionici samo uz prethodni dogovor.
                 </p>
               </div>
 
@@ -198,9 +198,9 @@ const Contact = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground leading-relaxed">
-              "Najbolje vreme da posadite drvo bilo je pre dvadeset godina.
+              "Najbolje vrijeme da posadite drvo bilo je prije dvadeset godina.
               <br />
-              Drugo najbolje vreme je sada."
+              Drugo najbolje vrijeme je sada."
             </blockquote>
             <p className="mt-6 text-sm text-muted-foreground">— Drevna poslovica</p>
           </AnimatedSection>

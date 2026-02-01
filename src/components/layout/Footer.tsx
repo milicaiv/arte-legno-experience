@@ -17,7 +17,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="body-regular text-primary-foreground/80 max-w-sm leading-relaxed">
-              Gde drvo postaje umetnost. Ručno izrađeno s dušom, dizajnirano za generacije.
+              Gdje drvo postaje umjetnost. Ručno izrađeno s dušom, dizajnirano za generacije.
             </p>
           </div>
 

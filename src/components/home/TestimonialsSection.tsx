@@ -3,12 +3,12 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Svaki komad deluje živo. Možete osetiti dušu drveta i strast majstora.",
+    quote: "Svaki komad djeluje živo. Možete osjetiti dušu drveta i strast majstora.",
     author: "Elena M.",
     location: "Milano, Italija",
   },
   {
-    quote: "Pravo zanatstvo koje donosi toplinu u naš dom. To nije nameštaj—to je živo prisustvo.",
+    quote: "Pravo zanatstvo koje donosi toplinu u naš dom. To nije namještaj—to je živo prisustvo.",
     author: "Marko K.",
     location: "Beč, Austrija",
   },
