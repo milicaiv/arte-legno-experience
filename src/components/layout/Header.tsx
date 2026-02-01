@@ -45,8 +45,10 @@ export const Header = () => {
             <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
               ATLAGIĆ
             </span>
-            <span className="label-text text-muted-foreground text-[10px] tracking-[0.3em]">
-              ARTE LEGNO
+            <span className="flex justify-between w-full label-text text-muted-foreground text-[10px]">
+              {'ARTELEGNO'.split('').map((char, i) => (
+                <span key={i}>{char}</span>
+              ))}
             </span>
           </Link>
 
