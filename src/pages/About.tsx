@@ -150,10 +150,10 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <AnimatedSection key={service.title} delay={index * 0.1}>
-                <div className="p-8 border border-border hover:border-wood-light hover:shadow-soft transition-all duration-500">
+                <div className="h-full p-8 border border-border hover:border-wood-light hover:shadow-soft transition-all duration-500 flex flex-col">
                   <service.icon size={28} className="text-wood-medium mb-6" />
                   <h3 className="font-serif text-xl mb-3 text-foreground">{service.title}</h3>
-                  <p className="body-regular text-muted-foreground">{service.description}</p>
+                  <p className="body-regular text-muted-foreground flex-grow">{service.description}</p>
                 </div>
               </AnimatedSection>
             ))}
