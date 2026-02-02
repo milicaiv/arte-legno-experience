@@ -46,14 +46,15 @@ export const Header = () => {
             <img 
               src={logoIcon} 
               alt="Atlagić Arte Legno" 
-              className="w-9 h-9 md:w-10 md:h-10"
+              className="w-10 h-10 md:w-12 md:h-12"
             />
             <div className="flex flex-col">
               <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
                 ATLAGIĆ
               </span>
-              <span className="flex w-full label-text text-muted-foreground text-[10px] tracking-[0.2em]">
-                ARTE&nbsp;&nbsp;LEGNO
+              <span className="flex justify-between w-full label-text text-muted-foreground text-[10px]">
+                <span>ARTE</span>
+                <span>LEGNO</span>
               </span>
             </div>
           </Link>
