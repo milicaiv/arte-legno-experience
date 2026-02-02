@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logoIcon from "@/assets/logo-icon.png";
 
 const navLinks = [
   { name: "Početna", path: "/" },
@@ -41,22 +42,20 @@ export const Header = () => {
       >
         <div className="container-wide px-6 md:px-12 lg:px-24 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex flex-col">
-            <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
-              ATLAGIĆ
-            </span>
-            <span className="flex justify-between w-full label-text text-muted-foreground text-[10px]">
-              <span className="flex">
-                {'ARTE'.split('').map((char, i) => (
-                  <span key={`a${i}`} className="mr-[0.15em]">{char}</span>
-                ))}
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={logoIcon} 
+              alt="Atlagić Arte Legno" 
+              className="w-9 h-9 md:w-10 md:h-10"
+            />
+            <div className="flex flex-col">
+              <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
+                ATLAGIĆ
               </span>
-              <span className="flex">
-                {'LEGNO'.split('').map((char, i) => (
-                  <span key={`l${i}`} className={i < 4 ? "mr-[0.15em]" : ""}>{char}</span>
-                ))}
+              <span className="flex w-full label-text text-muted-foreground text-[10px] tracking-[0.2em]">
+                ARTE&nbsp;&nbsp;LEGNO
               </span>
-            </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
