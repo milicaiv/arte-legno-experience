@@ -37,9 +37,7 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="heading-display text-cream mb-6"
           >
-            Gdje Drvo
-            <br />
-            <span className="italic">Postaje Umjetnost</span>
+            Gdje Drvo Postaje Umjetnost
           </motion.h1>
 
           <motion.p

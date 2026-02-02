@@ -19,9 +19,7 @@ export const FinalCTA = () => {
       <div className="relative container-wide px-6 md:px-12 lg:px-24 text-center">
         <AnimatedSection>
           <h2 className="heading-display text-foreground max-w-4xl mx-auto mb-8">
-            Dozvolite Nam da Stvorimo Komad Koji Će Živjeti
-            <br />
-            <span className="italic">S Vama Generacijama</span>
+            Dozvolite Nam da Stvorimo Komad Koji Će Živjeti S Vama Generacijama
           </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-12">
             Svaka kreacija počinje razgovorom. Podijelite svoju viziju, i zajedno 

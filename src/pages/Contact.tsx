@@ -38,9 +38,7 @@ const Contact = () => {
               Započnite Razgovor
             </span>
             <h1 className="heading-display text-foreground mb-6">
-              Svaki Komad Počinje
-              <br />
-              <span className="italic">Sa Pričom</span>
+              Svaki Komad Počinje Sa Pričom
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
               Podijelite svoju viziju, svoje potrebe, svoje snove. Zajedno ćemo stvoriti 
@@ -156,7 +154,7 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground italic">
+                <p className="text-sm text-muted-foreground">
                   Posjete radionici samo uz prethodni dogovor.
                 </p>
               </div>
@@ -197,10 +195,8 @@ const Contact = () => {
       <section className="py-20 bg-secondary">
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
-            <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground leading-relaxed">
-              "Najbolje vrijeme da posadite drvo bilo je prije dvadeset godina.
-              <br />
-              Drugo najbolje vrijeme je sada."
+            <blockquote className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed">
+              "Najbolje vrijeme da posadite drvo bilo je prije dvadeset godina. Drugo najbolje vrijeme je sada."
             </blockquote>
             <p className="mt-6 text-sm text-muted-foreground">— Drevna poslovica</p>
           </AnimatedSection>

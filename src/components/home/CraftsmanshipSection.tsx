@@ -33,9 +33,7 @@ export const CraftsmanshipSection = () => {
             Naše Vrijednosti
           </span>
           <h2 className="heading-section text-foreground max-w-2xl mx-auto">
-            Zanatstvo Koje
-            <br />
-            <span className="italic">Govori Duši</span>
+            Zanatstvo Koje Govori Duši
           </h2>
         </AnimatedSection>
 
