@@ -75,9 +75,7 @@ const Blog = () => {
               Priče iz Radionice
             </span>
             <h1 className="heading-display text-foreground mb-6">
-              <span className="italic">Razmišljanja</span> o
-              <br />
-              Drvetu i Zanatu
+              Razmišljanja o Drvetu i Zanatu
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
               Misli, priče i uvidi iz života posvećenog umjetnosti 
@@ -182,7 +180,7 @@ const Blog = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-subsection text-foreground mb-4">
-              Priče Dostavljene u <span className="italic">Vaš Inbox</span>
+              Priče Dostavljene u Vaš Inbox
             </h2>
             <p className="body-regular text-muted-foreground mb-8 max-w-md mx-auto">
               Pridružite se našoj zajednici i primajte povremena razmišljanja o drvetu, 

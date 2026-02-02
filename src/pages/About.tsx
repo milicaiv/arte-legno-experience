@@ -61,9 +61,7 @@ const About = () => {
                 Naša Priča
               </span>
               <h1 className="heading-display text-foreground mb-6">
-                Život Posvećen
-                <br />
-                <span className="italic">Drvetu i Zanatu</span>
+                Život Posvećen Drvetu i Zanatu
               </h1>
               <p className="body-large text-muted-foreground">
                 Gdje se strast susreće sa strpljenjem, i svaka tekstura priča priču.
@@ -95,7 +93,7 @@ const About = () => {
               Početak
             </span>
             <h2 className="heading-section text-foreground mb-8">
-              Kako Je Sve <span className="italic">Počelo</span>
+              Kako Je Sve Počelo
             </h2>
           </AnimatedSection>
           
@@ -127,8 +125,8 @@ const About = () => {
                   postoji duboka vrijednost u stvarima napravljenim polako, sa pažnjom, sa dušom. 
                   Stvari koje će nas nadživjeti i prenijeti toplinu ljudskog dodira.
                 </p>
-                <p className="body-regular text-muted-foreground leading-relaxed italic">
-                  Danas, dvadeset godina kasnije, ta ista filozofija vodi svaki komad 
+                <p className="body-regular text-muted-foreground leading-relaxed">
+                  Danas, dvadeset godina kasnije, ta ista filozofija vodi svaki komad
                   koji napušta našu radionicu.
                 </p>
               </div>
@@ -145,7 +143,7 @@ const About = () => {
               Šta Stvaramo
             </span>
             <h2 className="heading-section text-foreground">
-              Naše <span className="italic">Usluge</span>
+              Naše Usluge
             </h2>
           </AnimatedSection>
 
@@ -171,7 +169,7 @@ const About = () => {
               Putovanje
             </span>
             <h2 className="heading-section">
-              Od Drveta do <span className="italic">Blaga</span>
+              Od Drveta do Blaga
             </h2>
           </AnimatedSection>
 
@@ -211,9 +209,7 @@ const About = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-section text-foreground mb-6">
-              Spremni da Započnete
-              <br />
-              <span className="italic">Vaš Projekat?</span>
+              Spremni da Započnete Vaš Projekat?
             </h2>
             <p className="body-large text-muted-foreground mb-10 max-w-xl mx-auto">
               Svako remek-djelo počinje razgovorom. Podijelite svoju viziju, 

@@ -28,9 +28,7 @@ export const TestimonialsSection = () => {
             Reči Naših Klijenata
           </span>
           <h2 className="heading-section">
-            Priče o
-            <br />
-            <span className="italic">Povezanosti</span>
+            Priče o Povezanosti
           </h2>
         </AnimatedSection>
 
@@ -39,7 +37,7 @@ export const TestimonialsSection = () => {
             <AnimatedSection key={index} delay={index * 0.15}>
               <div className="flex flex-col h-full">
                 <Quote size={32} className="text-primary-foreground/30 mb-6" />
-                <blockquote className="body-large text-primary-foreground/90 mb-8 flex-grow italic">
+                <blockquote className="body-large text-primary-foreground/90 mb-8 flex-grow">
                   "{testimonial.quote}"
                 </blockquote>
                 <div>

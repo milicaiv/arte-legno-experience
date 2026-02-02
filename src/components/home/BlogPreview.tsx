@@ -39,7 +39,7 @@ export const BlogPreview = () => {
               Priče iz Radionice
             </span>
             <h2 className="heading-section text-foreground">
-              Najnovija <span className="italic">Razmišljanja</span>
+              Najnovija Razmišljanja
             </h2>
           </div>
           <Link

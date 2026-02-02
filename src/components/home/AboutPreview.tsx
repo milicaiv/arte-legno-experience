@@ -30,9 +30,7 @@ export const AboutPreview = () => {
               Naša Filozofija
             </span>
             <h2 className="heading-section mb-6 text-foreground">
-              Umjetnost Sporog
-              <br />
-              <span className="italic">Zanatstva</span>
+              Umjetnost Sporog Zanatstva
             </h2>
             <div className="space-y-4 mb-8">
               <p className="body-large text-muted-foreground">
