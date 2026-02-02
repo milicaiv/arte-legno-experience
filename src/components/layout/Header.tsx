@@ -46,9 +46,16 @@ export const Header = () => {
               ATLAGIĆ
             </span>
             <span className="flex justify-between w-full label-text text-muted-foreground text-[10px]">
-              {'ARTELEGNO'.split('').map((char, i) => (
-                <span key={i}>{char}</span>
-              ))}
+              <span className="flex">
+                {'ARTE'.split('').map((char, i) => (
+                  <span key={`a${i}`} className="mr-[0.15em]">{char}</span>
+                ))}
+              </span>
+              <span className="flex">
+                {'LEGNO'.split('').map((char, i) => (
+                  <span key={`l${i}`} className={i < 4 ? "mr-[0.15em]" : ""}>{char}</span>
+                ))}
+              </span>
             </span>
           </Link>
 
