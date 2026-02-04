@@ -52,7 +52,7 @@ export const Header = () => {
               <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
                 ATLAGIĆ
               </span>
-              <span className="label-text text-muted-foreground text-[10px] tracking-[0.25em]">
+              <span className="label-text text-muted-foreground text-[10px] tracking-[0.25em] text-center w-full">
                 ARTE <span className="ml-1">LEGNO</span>
               </span>
             </div>
