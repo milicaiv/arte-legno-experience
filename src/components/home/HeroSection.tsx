@@ -2,6 +2,22 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-workshop.jpg";
 
+const headlineWords = ["Gdje", "Drvo", "Postaje", "Umjetnost"];
+
+const wordVariants = {
+  hidden: { opacity: 0, y: 60, rotateX: -40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: {
+      duration: 0.8,
+      delay: 0.5 + i * 0.15,
+      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+    },
+  }),
+};
+
 export const HeroSection = () => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
@@ -31,14 +47,21 @@ export const HeroSection = () => {
             Ručno Izrađena Umjetnost od Drveta
           </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="heading-display text-cream mb-6"
-          >
-            Gdje Drvo Postaje Umjetnost
-          </motion.h1>
+          <h1 className="heading-display text-cream mb-6" style={{ perspective: "1000px" }}>
+            {headlineWords.map((word, i) => (
+              <motion.span
+                key={word}
+                custom={i}
+                variants={wordVariants}
+                initial="hidden"
+                animate="visible"
+                className="inline-block mr-[0.3em]"
+                style={{ transformOrigin: "center bottom" }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
