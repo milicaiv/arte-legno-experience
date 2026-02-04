@@ -52,9 +52,8 @@ export const Header = () => {
               <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
                 ATLAGIĆ
               </span>
-              <span className="flex justify-between w-full label-text text-muted-foreground text-[10px]">
-                <span>ARTE</span>
-                <span>LEGNO</span>
+              <span className="label-text text-muted-foreground text-[10px] tracking-[0.25em]">
+                ARTE <span className="ml-1">LEGNO</span>
               </span>
             </div>
           </Link>
