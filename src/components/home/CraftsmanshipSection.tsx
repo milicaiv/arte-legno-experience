@@ -39,13 +39,13 @@ export const CraftsmanshipSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
-            <AnimatedSection key={value.title} delay={index * 0.1}>
-              <div className="text-center p-8 bg-background hover:shadow-medium transition-all duration-500">
+            <AnimatedSection key={value.title} delay={index * 0.1} className="h-full">
+              <div className="h-full flex flex-col text-center p-8 bg-background hover:shadow-medium transition-all duration-500">
                 <div className="w-14 h-14 mx-auto mb-6 flex items-center justify-center border border-border">
                   <value.icon size={24} className="text-wood-medium" />
                 </div>
                 <h3 className="font-serif text-xl mb-3 text-foreground">{value.title}</h3>
-                <p className="body-regular text-muted-foreground">{value.description}</p>
+                <p className="body-regular text-muted-foreground flex-grow">{value.description}</p>
               </div>
             </AnimatedSection>
           ))}
