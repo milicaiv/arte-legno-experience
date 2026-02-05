@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-workshop.jpg";
 
-const headlineWords = ["Gdje", "Drvo", "Postaje", "Umjetnost"];
+const headlineWords = ["Gdje", "drvo", "postaje", "umjetnost"];
 
 const wordVariants = {
   hidden: { opacity: 0, y: 60, rotateX: -40 },
