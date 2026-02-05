@@ -19,10 +19,10 @@ export const GallerySection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-muted-foreground mb-4 block">
-            Vizuelno Putovanje
+            Vizuelno putovanje
           </span>
           <h2 className="heading-section text-foreground">
-            Teksture, Trenuci, Živa Umjetnost
+            Teksture, trenuci, živa umjetnost
           </h2>
         </AnimatedSection>
 

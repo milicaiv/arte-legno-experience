@@ -44,7 +44,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="label-text text-cream/80 mb-6 block"
           >
-            Ručno Izrađena Umjetnost od Drveta
+            Ručno izrađena umjetnost od drveta
           </motion.span>
 
           <h1 className="heading-display text-cream mb-6" style={{ perspective: "1000px" }}>
@@ -84,13 +84,13 @@ export const HeroSection = () => {
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-cream text-charcoal text-sm font-medium tracking-wide transition-all duration-300 hover:bg-cream-dark"
             >
-              Naručite Jedinstveni Komad
+              Naručite jedinstveni komad
             </Link>
             <Link
               to="/about"
               className="inline-flex items-center justify-center px-8 py-4 border border-cream/50 text-cream text-sm font-medium tracking-wide transition-all duration-300 hover:bg-cream/10"
             >
-              Naša Priča
+              Naša priča
             </Link>
           </motion.div>
         </div>

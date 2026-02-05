@@ -19,7 +19,7 @@ export const FinalCTA = () => {
       <div className="relative container-wide px-6 md:px-12 lg:px-24 text-center">
         <AnimatedSection>
           <h2 className="heading-display text-foreground max-w-4xl mx-auto mb-8">
-            Dozvolite Nam da Stvorimo Komad Koji Će Živjeti S Vama Generacijama
+            Dozvolite nam da stvorimo komad koji će živjeti s vama generacijama
           </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-12">
             Svaka kreacija počinje razgovorom. Podijelite svoju viziju, i zajedno 
@@ -29,7 +29,7 @@ export const FinalCTA = () => {
             to="/contact"
             className="inline-flex items-center justify-center px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
           >
-            Započnite Svoje Putovanje
+            Započnite svoje putovanje
           </Link>
         </AnimatedSection>
       </div>

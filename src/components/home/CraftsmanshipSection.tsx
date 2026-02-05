@@ -9,17 +9,17 @@ const values = [
   },
   {
     icon: Clock,
-    title: "Spori Zanat",
+    title: "Spori zanat",
     description: "Svaki komad ima svoje prirodno vrijeme. Bez žurbe, bez prečica—samo strpljiva posvećenost.",
   },
   {
     icon: Heart,
-    title: "Duša i Strast",
+    title: "Duša i strast",
     description: "Svaka kreacija nosi suštinu ljudskog dodira, emocije i umjetničke vizije.",
   },
   {
     icon: Shield,
-    title: "Stvoreno da Traje",
+    title: "Stvoreno da traje",
     description: "Dizajnirano za generacije. Bezvremena estetika koja prevazilazi trendove i vrijeme.",
   },
 ];
@@ -30,10 +30,10 @@ export const CraftsmanshipSection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-muted-foreground mb-4 block">
-            Naše Vrijednosti
+            Naše vrijednosti
           </span>
           <h2 className="heading-section text-foreground max-w-2xl mx-auto">
-            Zanatstvo Koje Govori Duši
+            Zanatstvo koje govori duši
           </h2>
         </AnimatedSection>
 

@@ -9,21 +9,21 @@ const posts = [
   {
     image: woodTexture,
     category: "Filozofija",
-    title: "Jezik Teksture Drveta",
+    title: "Jezik teksture drveta",
     excerpt: "Razumijevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare.",
     slug: "jezik-teksture-drveta",
   },
   {
     image: workshopInterior,
-    category: "Iza Scene",
-    title: "Dan u Radionici",
+    category: "Iza scene",
+    title: "Dan u radionici",
     excerpt: "Ritam ručnog zanata—od prvog svjetla zore do posljednjeg poliranja.",
     slug: "dan-u-radionici",
   },
   {
     image: craftingHands,
     category: "Održivost",
-    title: "Poštovanje Ritma Prirode",
+    title: "Poštovanje ritma prirode",
     excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrijednosti.",
     slug: "postovanje-ritma-prirode",
   },
@@ -36,17 +36,17 @@ export const BlogPreview = () => {
         <AnimatedSection className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="label-text text-muted-foreground mb-4 block">
-              Priče iz Radionice
+              Priče iz radionice
             </span>
             <h2 className="heading-section text-foreground">
-              Najnovija Razmišljanja
+              Najnovija razmišljanja
             </h2>
           </div>
           <Link
             to="/blog"
             className="inline-flex items-center gap-2 text-foreground font-medium tracking-wide link-underline"
           >
-            Pogledajte Sve Priče
+            Pogledajte sve priče
             <ArrowRight size={16} />
           </Link>
         </AnimatedSection>

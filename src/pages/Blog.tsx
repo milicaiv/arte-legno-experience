@@ -8,49 +8,49 @@ import productBowl from "@/assets/product-bowl.jpg";
 import productTable from "@/assets/product-table.jpg";
 import heroWorkshop from "@/assets/hero-workshop.jpg";
 
-const categories = ["Sve", "Filozofija", "Iza Scene", "Održivost", "Proces Izrade"];
+const categories = ["Sve", "Filozofija", "Iza scene", "Održivost", "Proces izrade"];
 
 const posts = [
   {
     image: woodTexture,
     category: "Filozofija",
-    title: "Jezik Teksture Drveta",
+    title: "Jezik teksture drveta",
     excerpt: "Razumijevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare i kako učimo da ih čitamo.",
     date: "Januar 2026",
     featured: true,
   },
   {
     image: workshopInterior,
-    category: "Iza Scene",
-    title: "Dan u Radionici",
+    category: "Iza scene",
+    title: "Dan u radionici",
     excerpt: "Ritam ručnog zanata—od prvog svjetla zore do posljednjeg poliranja dana.",
     date: "Januar 2026",
   },
   {
     image: craftingHands,
     category: "Održivost",
-    title: "Poštovanje Ritma Prirode",
+    title: "Poštovanje ritma prirode",
     excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrijednosti u našoj praksi.",
     date: "Decembar 2025",
   },
   {
     image: productBowl,
-    category: "Proces Izrade",
-    title: "Umjetnost Struganja Drveta",
+    category: "Proces izrade",
+    title: "Umjetnost struganja drveta",
     excerpt: "Meditativna praksa koja pretvara sirovu građu u tečne, organske forme.",
     date: "Decembar 2025",
   },
   {
     image: productTable,
     category: "Filozofija",
-    title: "Stolovi Koji Okupljaju",
+    title: "Stolovi koji okupljaju",
     excerpt: "O dizajniranju namještaja koji postaje srce porodičnog života i razgovora.",
     date: "Novembar 2025",
   },
   {
     image: heroWorkshop,
-    category: "Iza Scene",
-    title: "Alati Zanata",
+    category: "Iza scene",
+    title: "Alati zanata",
     excerpt: "Ručni alati prenošeni kroz generacije i njihova nezamjenjiva uloga.",
     date: "Novembar 2025",
   },
@@ -72,10 +72,10 @@ const Blog = () => {
             className="text-center"
           >
             <span className="label-text text-muted-foreground mb-4 block">
-              Priče iz Radionice
+              Priče iz radionice
             </span>
             <h1 className="heading-display text-foreground mb-6">
-              Razmišljanja o Drvetu i Zanatu
+              Razmišljanja o drvetu i zanatu
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
               Misli, priče i uvidi iz života posvećenog umjetnosti 
@@ -180,7 +180,7 @@ const Blog = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-subsection text-foreground mb-4">
-              Priče Dostavljene u Vaš Inbox
+              Priče dostavljene u vaš inbox
             </h2>
             <p className="body-regular text-muted-foreground mb-8 max-w-md mx-auto">
               Pridružite se našoj zajednici i primajte povremena razmišljanja o drvetu, 
