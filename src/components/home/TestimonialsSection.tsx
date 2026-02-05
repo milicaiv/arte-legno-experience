@@ -25,10 +25,10 @@ export const TestimonialsSection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-primary-foreground/70 mb-4 block">
-            Reči Naših Klijenata
+            Reči naših klijenata
           </span>
           <h2 className="heading-section">
-            Priče o Povezanosti
+            Priče o povezanosti
           </h2>
         </AnimatedSection>
 

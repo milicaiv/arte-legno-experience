@@ -27,10 +27,10 @@ export const AboutPreview = () => {
           {/* Content */}
           <AnimatedSection direction="right" delay={0.2}>
             <span className="label-text text-muted-foreground mb-4 block">
-              Naša Filozofija
+              Naša filozofija
             </span>
             <h2 className="heading-section mb-6 text-foreground">
-              Umjetnost Sporog Zanatstva
+              Umjetnost sporog zanatstva
             </h2>
             <div className="space-y-4 mb-8">
               <p className="body-large text-muted-foreground">
@@ -48,7 +48,7 @@ export const AboutPreview = () => {
               to="/about"
               className="inline-flex items-center text-foreground font-medium tracking-wide link-underline"
             >
-              Otkrijte Našu Priču
+              Otkrijte našu priču
             </Link>
           </AnimatedSection>
         </div>

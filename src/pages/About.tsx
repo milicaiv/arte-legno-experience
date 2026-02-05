@@ -12,37 +12,37 @@ import { TreeDeciduous, Compass, Hand, Sparkles, Shield } from "lucide-react";
 const services = [
   {
     icon: TreeDeciduous,
-    title: "Namještaj po Mjeri",
+    title: "Namještaj po mjeri",
     description: "Stolovi, stolice i ormari izrađeni prema vašoj tačnoj viziji i prostoru.",
   },
   {
     icon: Compass,
-    title: "Umjetnički Drveni Predmeti",
+    title: "Umjetnički drveni predmeti",
     description: "Skulpturalni komadi koji brišu granicu između namještaja i umjetnosti.",
   },
   {
     icon: Hand,
-    title: "Enterijerski Dizajn od Drveta",
+    title: "Enterijerski dizajn od drveta",
     description: "Kompletna drvena rješenja za enterijer—od zidnih panela do ugradbenog namještaja.",
   },
   {
     icon: Sparkles,
-    title: "Jedinstveni Ručni Pokloni",
+    title: "Jedinstveni ručni pokloni",
     description: "Lični, značajni pokloni izrađeni s namjerom za posebne trenutke.",
   },
   {
     icon: Shield,
-    title: "Projekti po Narudžbini",
+    title: "Projekti po narudžbini",
     description: "Kompleksne narudžbine koje pomjeraju granice drvenog zanatstva.",
   },
 ];
 
 const process = [
-  { step: "01", title: "Odabir Drveta", description: "Nabavljamo etički iz održivih šuma, birajući svaki komad zbog njegovog jedinstvenog karaktera." },
-  { step: "02", title: "Razumijevanje Njegove Priče", description: "Čitamo teksturu, osjećamo potencijal, zamišljamo šta želi da postane." },
-  { step: "03", title: "Dizajniranje s Prirodom", description: "Sarađujemo s prirodnim oblikom drveta da bismo stvorili harmonične dizajne." },
-  { step: "04", title: "Ručna Izrada", description: "Strpljiv, precizan rad—svaki rez, spoj i kriva oblikovani iskusnim rukama." },
-  { step: "05", title: "Završna Obrada i Zaštita", description: "Prirodna ulja i završne obrade koje pojačavaju ljepotu dok čuvaju za generacije." },
+  { step: "01", title: "Odabir drveta", description: "Nabavljamo etički iz održivih šuma, birajući svaki komad zbog njegovog jedinstvenog karaktera." },
+  { step: "02", title: "Razumijevanje njegove priče", description: "Čitamo teksturu, osjećamo potencijal, zamišljamo šta želi da postane." },
+  { step: "03", title: "Dizajniranje s prirodom", description: "Sarađujemo s prirodnim oblikom drveta da bismo stvorili harmonične dizajne." },
+  { step: "04", title: "Ručna izrada", description: "Strpljiv, precizan rad—svaki rez, spoj i kriva oblikovani iskusnim rukama." },
+  { step: "05", title: "Završna obrada i zaštita", description: "Prirodna ulja i završne obrade koje pojačavaju ljepotu dok čuvaju za generacije." },
 ];
 
 const About = () => {
@@ -58,10 +58,10 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <span className="label-text text-muted-foreground mb-4 block">
-                Naša Priča
+                Naša priča
               </span>
               <h1 className="heading-display text-foreground mb-6">
-                Život Posvećen Drvetu i Zanatu
+                Život posvećen drvetu i zanatu
               </h1>
               <p className="body-large text-muted-foreground">
                 Gdje se strast susreće sa strpljenjem, i svaka tekstura priča priču.
@@ -93,7 +93,7 @@ const About = () => {
               Početak
             </span>
             <h2 className="heading-section text-foreground mb-8">
-              Kako Je Sve Počelo
+              Kako je sve počelo
             </h2>
           </AnimatedSection>
           
@@ -140,10 +140,10 @@ const About = () => {
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <AnimatedSection className="text-center mb-16">
             <span className="label-text text-muted-foreground mb-4 block">
-              Šta Stvaramo
+              Šta stvaramo
             </span>
             <h2 className="heading-section text-foreground">
-              Naše Usluge
+              Naše usluge
             </h2>
           </AnimatedSection>
 
@@ -169,7 +169,7 @@ const About = () => {
               Putovanje
             </span>
             <h2 className="heading-section">
-              Od Drveta do Blaga
+              Od drveta do blaga
             </h2>
           </AnimatedSection>
 
@@ -209,7 +209,7 @@ const About = () => {
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-section text-foreground mb-6">
-              Spremni da Započnete Vaš Projekat?
+              Spremni da započnete vaš projekat?
             </h2>
             <p className="body-large text-muted-foreground mb-10 max-w-xl mx-auto">
               Svako remek-djelo počinje razgovorom. Podijelite svoju viziju, 
@@ -219,7 +219,7 @@ const About = () => {
               to="/contact"
               className="inline-flex items-center justify-center px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
             >
-              Započnite Vaš Projekat
+              Započnite vaš projekat
             </Link>
           </AnimatedSection>
         </div>

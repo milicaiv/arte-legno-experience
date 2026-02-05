@@ -35,10 +35,10 @@ const Contact = () => {
             className="text-center"
           >
             <span className="label-text text-muted-foreground mb-4 block">
-              Započnite Razgovor
+              Započnite razgovor
             </span>
             <h1 className="heading-display text-foreground mb-6">
-              Svaki Komad Počinje Sa Pričom
+              Svaki komad počinje sa pričom
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
               Podijelite svoju viziju, svoje potrebe, svoje snove. Zajedno ćemo stvoriti 
@@ -58,7 +58,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="label-text text-muted-foreground block mb-2">
-                      Vaše Ime
+                      Vaše ime
                     </label>
                     <input
                       type="text"
@@ -72,7 +72,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="label-text text-muted-foreground block mb-2">
-                      Email Adresa
+                      Email adresa
                     </label>
                     <input
                       type="email"
@@ -98,17 +98,17 @@ const Contact = () => {
                     className="w-full px-5 py-4 bg-transparent border border-border text-foreground focus:outline-none focus:border-primary transition-colors duration-300 appearance-none cursor-pointer"
                   >
                     <option value="">Izaberite temu...</option>
-                    <option value="custom-furniture">Namještaj po Mjeri</option>
-                    <option value="art-objects">Umjetnički Drveni Predmeti</option>
-                    <option value="interior-design">Enterijerski Dizajn od Drveta</option>
-                    <option value="gifts">Ručni Pokloni</option>
-                    <option value="other">Ostali Upiti</option>
+                    <option value="custom-furniture">Namještaj po mjeri</option>
+                    <option value="art-objects">Umjetnički drveni predmeti</option>
+                    <option value="interior-design">Enterijerski dizajn od drveta</option>
+                    <option value="gifts">Ručni pokloni</option>
+                    <option value="other">Ostali upiti</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="label-text text-muted-foreground block mb-2">
-                    Vaša Poruka
+                    Vaša poruka
                   </label>
                   <textarea
                     name="message"
@@ -125,7 +125,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full md:w-auto px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
                 >
-                  Pošaljite Poruku
+                  Pošaljite poruku
                 </button>
               </form>
             </AnimatedSection>
@@ -143,7 +143,7 @@ const Contact = () => {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <h3 className="font-serif text-2xl text-foreground">Posjetite Radionicu</h3>
+                <h3 className="font-serif text-2xl text-foreground">Posjetite radionicu</h3>
                 <div className="flex items-start gap-4">
                   <MapPin size={20} className="text-wood-medium mt-1 flex-shrink-0" />
                   <div>
