@@ -42,7 +42,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="label-text text-cream/80 mb-6 block"
+            className="label-text normal-case text-cream/80 mb-6 block"
           >
             Ručno izrađena umjetnost od drveta
           </motion.span>
