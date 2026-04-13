@@ -54,10 +54,10 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Form */}
             <AnimatedSection>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="label-text text-muted-foreground block mb-2">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="group">
+                    <label className="text-xs tracking-wider text-muted-foreground block mb-3 group-focus-within:text-foreground transition-colors duration-300">
                       Vaše ime
                     </label>
                     <input
@@ -66,12 +66,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300 text-base"
                       placeholder="Petar Petrović"
                     />
                   </div>
-                  <div>
-                    <label className="label-text text-muted-foreground block mb-2">
+                  <div className="group">
+                    <label className="text-xs tracking-wider text-muted-foreground block mb-3 group-focus-within:text-foreground transition-colors duration-300">
                       Email adresa
                     </label>
                     <input
@@ -80,14 +80,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300 text-base"
                       placeholder="petar@primjer.com"
                     />
                   </div>
                 </div>
 
-                <div>
-                  <label className="label-text text-muted-foreground block mb-2">
+                <div className="group">
+                  <label className="text-xs tracking-wider text-muted-foreground block mb-3 group-focus-within:text-foreground transition-colors duration-300">
                     Tema
                   </label>
                   <select
@@ -95,7 +95,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-5 py-4 bg-transparent border border-border text-foreground focus:outline-none focus:border-primary transition-colors duration-300 appearance-none cursor-pointer"
+                    className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-foreground focus:outline-none focus:border-primary transition-colors duration-300 appearance-none cursor-pointer text-base"
                   >
                     <option value="">Izaberite temu...</option>
                     <option value="custom-furniture">Namještaj po mjeri</option>
@@ -106,8 +106,8 @@ const Contact = () => {
                   </select>
                 </div>
 
-                <div>
-                  <label className="label-text text-muted-foreground block mb-2">
+                <div className="group">
+                  <label className="text-xs tracking-wider text-muted-foreground block mb-3 group-focus-within:text-foreground transition-colors duration-300">
                     Vaša poruka
                   </label>
                   <textarea
@@ -115,18 +115,20 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
-                    className="w-full px-5 py-4 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                    rows={5}
+                    className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300 resize-none text-base leading-relaxed"
                     placeholder="Recite nam o svom projektu, prostoru, viziji..."
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full md:w-auto px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
-                >
-                  Pošaljite poruku
-                </button>
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    className="w-full md:w-auto px-12 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-500 hover:bg-wood-medium hover:shadow-lg"
+                  >
+                    Pošaljite poruku
+                  </button>
+                </div>
               </form>
             </AnimatedSection>
 
