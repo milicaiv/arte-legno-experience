@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { motion } from "framer-motion";
@@ -7,8 +8,16 @@ import { blogPosts } from "@/data/blogPosts";
 const categories = ["Sve", "Filozofija", "Iza scene", "Održivost", "Proces izrade"];
 
 const Blog = () => {
-  const featuredPost = blogPosts.find((p) => p.featured);
-  const regularPosts = blogPosts.filter((p) => !p.featured);
+  const [activeCategory, setActiveCategory] = useState("Sve");
+
+  const filteredPosts = activeCategory === "Sve"
+    ? blogPosts
+    : blogPosts.filter((p) => p.category === activeCategory);
+
+  const featuredPost = activeCategory === "Sve" ? blogPosts.find((p) => p.featured) : null;
+  const regularPosts = featuredPost
+    ? filteredPosts.filter((p) => p.slug !== featuredPost.slug)
+    : filteredPosts;
 
   return (
     <Layout>
@@ -45,8 +54,9 @@ const Blog = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
+                onClick={() => setActiveCategory(cat)}
                 className={`text-sm tracking-wide transition-colors duration-300 ${
-                  index === 0
+                  activeCategory === cat
                     ? "text-foreground font-medium"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
@@ -92,40 +102,48 @@ const Blog = () => {
       )}
 
       {/* Divider */}
-      <div className="container-wide px-6 md:px-12 lg:px-24">
-        <div className="divider-line" />
-      </div>
+      {featuredPost && (
+        <div className="container-wide px-6 md:px-12 lg:px-24">
+          <div className="divider-line" />
+        </div>
+      )}
 
       {/* Posts Grid */}
       <section className="section-padding bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-            {regularPosts.map((post, index) => (
-              <AnimatedSection key={post.slug} delay={index * 0.1}>
-                <Link to={`/blog/${post.slug}`}>
-                  <article className="group cursor-pointer">
-                    <div className="aspect-[4/3] overflow-hidden mb-6">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                    <span className="label-text text-muted-foreground mb-2 block">
-                      {post.category}
-                    </span>
-                    <h3 className="font-serif text-xl md:text-2xl mb-3 text-foreground group-hover:text-wood-medium transition-colors duration-300">
-                      {post.title}
-                    </h3>
-                    <p className="body-regular text-muted-foreground mb-4">
-                      {post.excerpt}
-                    </p>
-                    <span className="text-sm text-muted-foreground">{post.date}</span>
-                  </article>
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
+          {regularPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+              {regularPosts.map((post, index) => (
+                <AnimatedSection key={post.slug} delay={index * 0.1}>
+                  <Link to={`/blog/${post.slug}`}>
+                    <article className="group cursor-pointer">
+                      <div className="aspect-[4/3] overflow-hidden mb-6">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
+                      <span className="label-text text-muted-foreground mb-2 block">
+                        {post.category}
+                      </span>
+                      <h3 className="font-serif text-xl md:text-2xl mb-3 text-foreground group-hover:text-wood-medium transition-colors duration-300">
+                        {post.title}
+                      </h3>
+                      <p className="body-regular text-muted-foreground mb-4">
+                        {post.excerpt}
+                      </p>
+                      <span className="text-sm text-muted-foreground">{post.date}</span>
+                    </article>
+                  </Link>
+                </AnimatedSection>
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-muted-foreground body-regular">
+              Nema članaka u ovoj kategoriji.
+            </p>
+          )}
         </div>
       </section>
 
