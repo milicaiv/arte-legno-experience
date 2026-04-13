@@ -1,64 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { motion } from "framer-motion";
-import woodTexture from "@/assets/wood-texture-1.jpg";
-import workshopInterior from "@/assets/workshop-interior.jpg";
-import craftingHands from "@/assets/crafting-hands.jpg";
-import productBowl from "@/assets/product-bowl.jpg";
-import productTable from "@/assets/product-table.jpg";
-import heroWorkshop from "@/assets/hero-workshop.jpg";
+import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blogPosts";
 
 const categories = ["Sve", "Filozofija", "Iza scene", "Održivost", "Proces izrade"];
 
-const posts = [
-  {
-    image: woodTexture,
-    category: "Filozofija",
-    title: "Jezik teksture drveta",
-    excerpt: "Razumijevanje priča koje svaki komad drveta priča kroz svoje jedinstvene šare i kako učimo da ih čitamo.",
-    date: "Januar 2026",
-    featured: true,
-  },
-  {
-    image: workshopInterior,
-    category: "Iza scene",
-    title: "Dan u radionici",
-    excerpt: "Ritam ručnog zanata—od prvog svjetla zore do posljednjeg poliranja dana.",
-    date: "Januar 2026",
-  },
-  {
-    image: craftingHands,
-    category: "Održivost",
-    title: "Poštovanje ritma prirode",
-    excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrijednosti u našoj praksi.",
-    date: "Decembar 2025",
-  },
-  {
-    image: productBowl,
-    category: "Proces izrade",
-    title: "Umjetnost struganja drveta",
-    excerpt: "Meditativna praksa koja pretvara sirovu građu u tečne, organske forme.",
-    date: "Decembar 2025",
-  },
-  {
-    image: productTable,
-    category: "Filozofija",
-    title: "Stolovi koji okupljaju",
-    excerpt: "O dizajniranju namještaja koji postaje srce porodičnog života i razgovora.",
-    date: "Novembar 2025",
-  },
-  {
-    image: heroWorkshop,
-    category: "Iza scene",
-    title: "Alati zanata",
-    excerpt: "Ručni alati prenošeni kroz generacije i njihova nezamjenjiva uloga.",
-    date: "Novembar 2025",
-  },
-];
-
 const Blog = () => {
-  const featuredPost = posts.find((p) => p.featured);
-  const regularPosts = posts.filter((p) => !p.featured);
+  const featuredPost = blogPosts.find((p) => p.featured);
+  const regularPosts = blogPosts.filter((p) => !p.featured);
 
   return (
     <Layout>
@@ -113,27 +63,29 @@ const Blog = () => {
         <section className="section-padding bg-background">
           <div className="container-wide px-6 md:px-12 lg:px-24">
             <AnimatedSection>
-              <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center cursor-pointer group">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div>
-                  <span className="label-text text-wood-medium mb-4 block">
-                    Istaknuto • {featuredPost.category}
-                  </span>
-                  <h2 className="heading-subsection text-foreground mb-4 group-hover:text-wood-medium transition-colors duration-300">
-                    {featuredPost.title}
-                  </h2>
-                  <p className="body-large text-muted-foreground mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-                  <span className="text-sm text-muted-foreground">{featuredPost.date}</span>
-                </div>
-              </article>
+              <Link to={`/blog/${featuredPost.slug}`}>
+                <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center cursor-pointer group">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={featuredPost.image}
+                      alt={featuredPost.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div>
+                    <span className="label-text text-wood-medium mb-4 block">
+                      Istaknuto • {featuredPost.category}
+                    </span>
+                    <h2 className="heading-subsection text-foreground mb-4 group-hover:text-wood-medium transition-colors duration-300">
+                      {featuredPost.title}
+                    </h2>
+                    <p className="body-large text-muted-foreground mb-6">
+                      {featuredPost.excerpt}
+                    </p>
+                    <span className="text-sm text-muted-foreground">{featuredPost.date}</span>
+                  </div>
+                </article>
+              </Link>
             </AnimatedSection>
           </div>
         </section>
@@ -149,26 +101,28 @@ const Blog = () => {
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {regularPosts.map((post, index) => (
-              <AnimatedSection key={post.title} delay={index * 0.1}>
-                <article className="group cursor-pointer">
-                  <div className="aspect-[4/3] overflow-hidden mb-6">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <span className="label-text text-muted-foreground mb-2 block">
-                    {post.category}
-                  </span>
-                  <h3 className="font-serif text-xl md:text-2xl mb-3 text-foreground group-hover:text-wood-medium transition-colors duration-300">
-                    {post.title}
-                  </h3>
-                  <p className="body-regular text-muted-foreground mb-4">
-                    {post.excerpt}
-                  </p>
-                  <span className="text-sm text-muted-foreground">{post.date}</span>
-                </article>
+              <AnimatedSection key={post.slug} delay={index * 0.1}>
+                <Link to={`/blog/${post.slug}`}>
+                  <article className="group cursor-pointer">
+                    <div className="aspect-[4/3] overflow-hidden mb-6">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <span className="label-text text-muted-foreground mb-2 block">
+                      {post.category}
+                    </span>
+                    <h3 className="font-serif text-xl md:text-2xl mb-3 text-foreground group-hover:text-wood-medium transition-colors duration-300">
+                      {post.title}
+                    </h3>
+                    <p className="body-regular text-muted-foreground mb-4">
+                      {post.excerpt}
+                    </p>
+                    <span className="text-sm text-muted-foreground">{post.date}</span>
+                  </article>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
