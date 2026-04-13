@@ -31,7 +31,6 @@ const BlogPost = () => {
     );
   }
 
-  // Split content into paragraphs, handling markdown-style headers
   const renderContent = (content: string) => {
     return content.split("\n\n").map((block, index) => {
       if (block.startsWith("## ")) {
@@ -54,7 +53,6 @@ const BlogPost = () => {
 
   return (
     <Layout>
-      {/* Back link */}
       <section className="pt-32 pb-4 bg-background">
         <div className="container-narrow px-6 md:px-12 lg:px-24">
           <motion.div
@@ -73,7 +71,6 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Article Header */}
       <section className="pb-8 bg-background">
         <div className="container-narrow px-6 md:px-12 lg:px-24">
           <motion.div
@@ -105,7 +102,6 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Featured Image */}
       <section className="pb-12 bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <motion.div
@@ -123,7 +119,6 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Article Content */}
       <section className="pb-20 bg-background">
         <div className="container-narrow px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
           <AnimatedSection>
@@ -134,12 +129,10 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Divider */}
       <div className="container-narrow px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
         <div className="divider-line" />
       </div>
 
-      {/* Author Section */}
       <section className="section-padding bg-background">
         <div className="container-narrow px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
           <AnimatedSection>

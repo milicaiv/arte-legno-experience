@@ -13,42 +13,61 @@ const services = [
   {
     icon: TreeDeciduous,
     title: "Namještaj po mjeri",
-    description: "Stolovi, stolice i ormari izrađeni prema vašoj tačnoj viziji i prostoru.",
+    description: "Stolovi, stolice i ormari izrađeni prema vašoj viziji, prostoru i načinu života.",
   },
   {
     icon: Compass,
     title: "Umjetnički drveni predmeti",
-    description: "Skulpturalni komadi koji brišu granicu između namještaja i umjetnosti.",
+    description: "Skulpturalni komadi koji brišu granicu između funkcionalnog predmeta i umjetnosti.",
   },
   {
     icon: Hand,
     title: "Enterijerski dizajn od drveta",
-    description: "Kompletna drvena rješenja za enterijer—od zidnih panela do ugradbenog namještaja.",
+    description: "Kompletna drvena rješenja za enterijer, od zidnih panela do ugradbenog namještaja.",
   },
   {
     icon: Sparkles,
     title: "Jedinstveni ručni pokloni",
-    description: "Lični, značajni pokloni izrađeni s namjerom za posebne trenutke.",
+    description: "Lični i značajni pokloni izrađeni s pažnjom za posebne trenutke.",
   },
   {
     icon: Shield,
     title: "Projekti po narudžbini",
-    description: "Kompleksne narudžbine koje pomjeraju granice drvenog zanatstva.",
+    description: "Kompleksne narudžbe koje traže promišljeno rješenje i vrhunsku izvedbu.",
   },
 ];
 
 const process = [
-  { step: "01", title: "Odabir drveta", description: "Nabavljamo etički iz održivih šuma, birajući svaki komad zbog njegovog jedinstvenog karaktera." },
-  { step: "02", title: "Razumijevanje njegove priče", description: "Čitamo teksturu, osjećamo potencijal, zamišljamo šta želi da postane." },
-  { step: "03", title: "Dizajniranje s prirodom", description: "Sarađujemo s prirodnim oblikom drveta da bismo stvorili harmonične dizajne." },
-  { step: "04", title: "Ručna izrada", description: "Strpljiv, precizan rad—svaki rez, spoj i kriva oblikovani iskusnim rukama." },
-  { step: "05", title: "Završna obrada i zaštita", description: "Prirodna ulja i završne obrade koje pojačavaju ljepotu dok čuvaju za generacije." },
+  {
+    step: "01",
+    title: "Odabir drveta",
+    description: "Biramo drvo iz održivih izvora, pažljivo prateći njegov karakter, porijeklo i potencijal.",
+  },
+  {
+    step: "02",
+    title: "Razumijevanje materijala",
+    description: "Čitamo teksturu, osluškujemo formu i zamišljamo šta drvo prirodno želi postati.",
+  },
+  {
+    step: "03",
+    title: "Dizajn u skladu s prirodom",
+    description: "Oblikujemo ideju tako da poštuje strukturu drveta i prostor za koji je namijenjena.",
+  },
+  {
+    step: "04",
+    title: "Ručna izrada",
+    description: "Svaki rez, spoj i krivina nastaju strpljivo, precizno i s punom pažnjom prema detalju.",
+  },
+  {
+    step: "05",
+    title: "Završna obrada",
+    description: "Prirodna ulja i završni slojevi štite površinu i ističu ljepotu koja traje godinama.",
+  },
 ];
 
 const About = () => {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -64,7 +83,7 @@ const About = () => {
                 Život posvećen drvetu i zanatu
               </h1>
               <p className="body-large text-muted-foreground">
-                Gdje se strast susreće sa strpljenjem, i svaka tekstura priča priču.
+                Gdje se strast susreće sa strpljenjem, a svaka tekstura nosi svoju priču.
               </p>
             </motion.div>
             <motion.div
@@ -85,7 +104,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founder Story */}
       <section className="section-padding bg-secondary">
         <div className="container-narrow px-6 md:px-12">
           <AnimatedSection className="text-center mb-16">
@@ -96,7 +114,7 @@ const About = () => {
               Kako je sve počelo
             </h2>
           </AnimatedSection>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <AnimatedSection>
               <div className="aspect-[3/4] overflow-hidden">
@@ -107,23 +125,24 @@ const About = () => {
                 />
               </div>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={0.2}>
               <div className="space-y-6">
                 <p className="body-large text-foreground leading-relaxed">
-                  Sve je počelo u dedinoj radionici—miris hrastovih strugotina, 
-                  ritam ručnih blanja, strpljenje čovjeka koji je razgovarao sa 
-                  drvetom kao da je živo.
+                  Sve je počelo u djedovoj radionici, uz miris hrastovih strugotina,
+                  ritam ručnih blanja i strpljenje čovjeka koji je sa drvetom
+                  razgovarao kao sa živim bićem.
                 </p>
                 <p className="body-regular text-muted-foreground leading-relaxed">
-                  Te rane godine su oblikovale sve. Naučio sam da drvo nije samo 
-                  materijal—to je živi arhiv vremena, vremenskih prilika i rasta. Svaki 
-                  prsten govori o godini života. Svaki čvor čuva sjećanje.
+                  Te rane godine oblikovale su sve što danas radimo. Naučio sam da
+                  drvo nije samo materijal, već živi arhiv vremena, klime i rasta.
+                  Svaki god govori o jednoj godini života, a svaki čvor čuva svoje sjećanje.
                 </p>
                 <p className="body-regular text-muted-foreground leading-relaxed">
-                  ATLAGIĆ — ARTE LEGNO je rođen iz jednostavnog uvjerenja: u našem brzom svijetu, 
-                  postoji duboka vrijednost u stvarima napravljenim polako, sa pažnjom, sa dušom. 
-                  Stvari koje će nas nadživjeti i prenijeti toplinu ljudskog dodira.
+                  ATLAGIĆ - ARTE LEGNO rođen je iz jednostavnog uvjerenja: u brzom
+                  svijetu i dalje postoji duboka vrijednost u stvarima nastalim polako,
+                  pažljivo i s dušom. U predmetima koji nas mogu nadživjeti i prenijeti
+                  toplinu ljudskog dodira.
                 </p>
                 <p className="body-regular text-muted-foreground leading-relaxed">
                   Danas, dvadeset godina kasnije, ta ista filozofija vodi svaki komad
@@ -135,7 +154,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="section-padding bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <AnimatedSection className="text-center mb-16">
@@ -161,7 +179,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <AnimatedSection className="text-center mb-16">
@@ -193,7 +210,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Gallery Strip */}
       <section className="py-4 bg-background overflow-hidden">
         <div className="flex gap-4 animate-[slide_30s_linear_infinite]">
           {[productTable, craftingHands, productBowl, workshopImage].map((img, index) => (
@@ -204,22 +220,21 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-secondary">
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
             <h2 className="heading-section text-foreground mb-6">
-              Spremni da započnete vaš projekat?
+              Spremni da započnete svoj projekat?
             </h2>
             <p className="body-large text-muted-foreground mb-10 max-w-xl mx-auto">
-              Svako remek-djelo počinje razgovorom. Podijelite svoju viziju, 
+              Svako remek-djelo počinje razgovorom. Podijelite svoju viziju,
               i hajde da zajedno stvorimo nešto izvanredno.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-10 py-5 bg-primary text-primary-foreground text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-wood-medium"
             >
-              Započnite vaš projekat
+              Započnite svoj projekat
             </Link>
           </AnimatedSection>
         </div>

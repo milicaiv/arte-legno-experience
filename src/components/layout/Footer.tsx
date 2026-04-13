@@ -6,7 +6,6 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="section-padding container-wide">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
-          {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex flex-col mb-6">
               <span className="font-serif text-2xl font-medium tracking-wide">
@@ -17,11 +16,10 @@ export const Footer = () => {
               </span>
             </div>
             <p className="body-regular text-primary-foreground/80 max-w-sm leading-relaxed">
-              Gdje drvo postaje umjetnost. Ručno izrađeno s dušom, dizajnirano za generacije.
+              Gdje drvo postaje umjetnost. Ručno izrađeno s dušom, stvarano za generacije.
             </p>
           </div>
 
-          {/* Navigation */}
           <div>
             <h4 className="label-text mb-6 text-primary-foreground/70">Navigacija</h4>
             <ul className="space-y-3">
@@ -43,7 +41,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="label-text mb-6 text-primary-foreground/70">Povežite se</h4>
             <div className="flex gap-4 mb-6">
@@ -62,7 +59,7 @@ export const Footer = () => {
                 <Facebook size={18} />
               </a>
               <a
-                href="mailto:hello@atlagic.com"
+                href="mailto:hello@atlagic-artelegno.com"
                 className="p-2 border border-primary-foreground/30 hover:border-primary-foreground transition-colors duration-300"
                 aria-label="Email"
               >
@@ -75,10 +72,9 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} ATLAGIĆ — ARTE LEGNO. Sva prava zadržana.
+            © {new Date().getFullYear()} ATLAGIĆ - ARTE LEGNO. Sva prava zadržana.
           </p>
           <p className="text-sm text-primary-foreground/60 italic">
             Izrađeno sa strpljenjem i ljubavlju prema drvetu.

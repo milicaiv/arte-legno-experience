@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { toast } from "@/components/ui/sonner";
+import { submitWebsiteForm } from "@/lib/form-submission";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
@@ -9,6 +11,8 @@ const categories = ["Sve", "Filozofija", "Iza scene", "Održivost", "Proces izra
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("Sve");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [isSubmittingNewsletter, setIsSubmittingNewsletter] = useState(false);
 
   const filteredPosts = activeCategory === "Sve"
     ? blogPosts
@@ -19,9 +23,33 @@ const Blog = () => {
     ? filteredPosts.filter((p) => p.slug !== featuredPost.slug)
     : filteredPosts;
 
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      setIsSubmittingNewsletter(true);
+      await submitWebsiteForm({
+        kind: "newsletter",
+        fields: {
+          email: newsletterEmail,
+        },
+      });
+
+      toast.success("Uspješno ste prijavljeni na newsletter.", {
+        description: "Nove priče iz radionice stizaće povremeno u vaš inbox.",
+      });
+      setNewsletterEmail("");
+    } catch (error) {
+      toast.error("Prijava na newsletter nije uspjela.", {
+        description: error instanceof Error ? error.message : "Pokušajte ponovo za nekoliko trenutaka.",
+      });
+    } finally {
+      setIsSubmittingNewsletter(false);
+    }
+  };
+
   return (
     <Layout>
-      {/* Header */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <motion.div
@@ -37,14 +65,13 @@ const Blog = () => {
               Razmišljanja o drvetu i zanatu
             </h1>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Misli, priče i uvidi iz života posvećenog umjetnosti 
+              Misli, priče i uvidi iz života posvećenog umjetnosti
               ručno izrađenog drveta.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Categories */}
       <section className="py-6 border-y border-border bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
@@ -68,7 +95,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Featured Post */}
       {featuredPost && (
         <section className="section-padding bg-background">
           <div className="container-wide px-6 md:px-12 lg:px-24">
@@ -101,14 +127,12 @@ const Blog = () => {
         </section>
       )}
 
-      {/* Divider */}
       {featuredPost && (
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <div className="divider-line" />
         </div>
       )}
 
-      {/* Posts Grid */}
       <section className="section-padding bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           {regularPosts.length > 0 ? (
@@ -147,7 +171,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
       <section className="section-padding bg-secondary">
         <div className="container-narrow px-6 md:px-12 text-center">
           <AnimatedSection>
@@ -155,20 +178,25 @@ const Blog = () => {
               Priče dostavljene u vaš inbox
             </h2>
             <p className="body-regular text-muted-foreground mb-8 max-w-md mx-auto">
-              Pridružite se našoj zajednici i primajte povremena razmišljanja o drvetu, 
+              Pridružite se našoj zajednici i primajte povremena razmišljanja o drvetu,
               zanatu i umjetnosti sporog stvaranja.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                disabled={isSubmittingNewsletter}
                 placeholder="Vaša email adresa"
+                required
                 className="flex-grow px-5 py-4 bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
               />
               <button
                 type="submit"
-                className="px-8 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide transition-all duration-300 hover:bg-wood-medium"
+                disabled={isSubmittingNewsletter}
+                className="px-8 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide transition-all duration-300 hover:bg-wood-medium disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Pretplatite se
+                {isSubmittingNewsletter ? "Slanje..." : "Pretplatite se"}
               </button>
             </form>
           </AnimatedSection>

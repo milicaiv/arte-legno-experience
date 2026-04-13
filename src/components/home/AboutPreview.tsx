@@ -7,7 +7,6 @@ export const AboutPreview = () => {
     <section className="section-padding bg-background">
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
           <AnimatedSection direction="left">
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden">
@@ -24,7 +23,6 @@ export const AboutPreview = () => {
             </div>
           </AnimatedSection>
 
-          {/* Content */}
           <AnimatedSection direction="right" delay={0.2}>
             <span className="label-text text-muted-foreground mb-4 block">
               Naša filozofija
@@ -34,14 +32,14 @@ export const AboutPreview = () => {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="body-large text-muted-foreground">
-                U svijetu masovne proizvodnje, mi smo izabrali drugačiji put. Svaki komad 
-                počinje razgovorom između majstora i drveta—razumijevanjem njegove 
-                teksture, karaktera, priče.
+                U svijetu masovne proizvodnje mi biramo drugačiji put. Svaki komad
+                počinje tihim razgovorom između majstora i drveta, razumijevanjem
+                njegove teksture, karaktera i priče.
               </p>
               <p className="body-regular text-muted-foreground">
-                Osnovan na uvjerenju da prava ljepota zahtijeva vrijeme, ATLAGIĆ — ARTE LEGNO 
-                stvara ručno izrađene drvene komade koji nose toplinu ljudskog dodira i 
-                mudrost prirode. Mi ne pravimo samo namještaj; stvaramo nasljeđe.
+                Nastao iz uvjerenja da prava ljepota traži vrijeme, ATLAGIĆ - ARTE LEGNO
+                stvara ručno izrađene drvene komade koji nose toplinu ljudskog dodira i
+                mudrost prirode. Ne pravimo samo namještaj, već stvaramo nasljeđe.
               </p>
             </div>
             <Link

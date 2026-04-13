@@ -21,7 +21,6 @@ const wordVariants = {
 export const HeroSection = () => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <motion.img
           src={heroImage}
@@ -35,7 +34,6 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 via-transparent to-transparent" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container-wide px-6 md:px-12 lg:px-24">
         <div className="max-w-3xl">
           <motion.span
@@ -44,7 +42,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="label-text normal-case text-cream/80 mb-6 block"
           >
-            Ručno izrađena umjetnost od drveta
+            Ručno izrađena umjetnost u drvetu
           </motion.span>
 
           <h1 className="heading-display text-cream mb-6" style={{ perspective: "1000px" }}>
@@ -69,7 +67,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="body-large text-cream/80 max-w-xl mb-10"
           >
-            Bezvremeni zanat. Živi materijal. Autentičan dizajn.
+            Bezvremenski zanat. Živi materijal. Autentičan dizajn.
             <br />
             Svaki komad priča priču o strpljenju, teksturi i poštovanju prema prirodi.
           </motion.p>
@@ -95,7 +93,6 @@ export const HeroSection = () => {
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 };

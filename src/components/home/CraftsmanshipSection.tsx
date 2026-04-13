@@ -5,22 +5,22 @@ const values = [
   {
     icon: Leaf,
     title: "Održivo",
-    description: "Etički nabavljeno drvo iz kontrolisanih šuma, poštujući ritam i regeneraciju prirode.",
+    description: "Etički nabavljeno drvo iz provjerenih izvora, uz poštovanje ritma i obnove prirode.",
   },
   {
     icon: Clock,
     title: "Spori zanat",
-    description: "Svaki komad ima svoje prirodno vrijeme. Bez žurbe, bez prečica—samo strpljiva posvećenost.",
+    description: "Svaki komad ima svoje prirodno vrijeme. Bez žurbe i bez prečica, samo strpljiva posvećenost.",
   },
   {
     icon: Heart,
     title: "Duša i strast",
-    description: "Svaka kreacija nosi suštinu ljudskog dodira, emocije i umjetničke vizije.",
+    description: "Svaka kreacija nosi trag ljudskog dodira, emocije i autentične umjetničke vizije.",
   },
   {
     icon: Shield,
     title: "Stvoreno da traje",
-    description: "Dizajnirano za generacije. Bezvremena estetika koja prevazilazi trendove i vrijeme.",
+    description: "Dizajnirano za generacije. Bezvremena estetika koja nadživljava trendove i vrijeme.",
   },
 ];
 

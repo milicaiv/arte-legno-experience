@@ -16,6 +16,11 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const handleNavClick = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -41,11 +46,10 @@ export const Header = () => {
         }`}
       >
         <div className="container-wide px-6 md:px-12 lg:px-24 flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={logoIcon} 
-              alt="Atlagić Arte Legno" 
+          <Link to="/" onClick={handleNavClick} className="flex items-center gap-3">
+            <img
+              src={logoIcon}
+              alt="Atlagić Arte Legno"
               className="w-10 h-10 md:w-12 md:h-12"
             />
             <div className="flex flex-col">
@@ -58,12 +62,12 @@ export const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
+                onClick={handleNavClick}
                 className={`link-underline text-sm font-medium tracking-wide transition-colors duration-300 ${
                   location.pathname === link.path
                     ? "text-foreground"
@@ -75,15 +79,14 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button Desktop */}
           <Link
             to="/contact"
+            onClick={handleNavClick}
             className="hidden md:inline-flex px-6 py-3 bg-primary text-primary-foreground text-sm font-medium tracking-wide transition-all duration-300 hover:bg-wood-medium"
           >
             Kontaktirajte nas
           </Link>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-foreground"
@@ -94,7 +97,6 @@ export const Header = () => {
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -120,6 +122,7 @@ export const Header = () => {
                 >
                   <Link
                     to={link.path}
+                    onClick={handleNavClick}
                     className={`font-serif text-3xl transition-colors duration-300 ${
                       location.pathname === link.path
                         ? "text-foreground"
@@ -137,6 +140,7 @@ export const Header = () => {
               >
                 <Link
                   to="/contact"
+                  onClick={handleNavClick}
                   className="mt-4 px-8 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide"
                 >
                   Kontaktirajte nas

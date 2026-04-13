@@ -3,12 +3,12 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Svaki komad djeluje živo. Možete osjetiti dušu drveta i strast majstora.",
+    quote: "Svaki komad djeluje živo. U njemu se osjete i duša drveta i strast majstora.",
     author: "Elena M.",
     location: "Milano, Italija",
   },
   {
-    quote: "Pravo zanatstvo koje donosi toplinu u naš dom. To nije namještaj—to je živo prisustvo.",
+    quote: "Pravo zanatstvo koje unosi toplinu u naš dom. To nije samo namještaj, nego živo prisustvo.",
     author: "Marko K.",
     location: "Beč, Austrija",
   },
@@ -25,7 +25,7 @@ export const TestimonialsSection = () => {
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="label-text text-primary-foreground/70 mb-4 block">
-            Reči naših klijenata
+            Riječi naših klijenata
           </span>
           <h2 className="heading-section">
             Priče o povezanosti

@@ -8,7 +8,7 @@ import craftingHands from "@/assets/crafting-hands.jpg";
 const galleryImages = [
   { src: woodTexture, alt: "Detalj teksture drveta", span: "col-span-1 row-span-1" },
   { src: productBowl, alt: "Ručno izrađena drvena činija", span: "col-span-1 row-span-2" },
-  { src: workshopInterior, alt: "Enterijer stolarke radionice", span: "col-span-1 row-span-1" },
+  { src: workshopInterior, alt: "Enterijer stolarske radionice", span: "col-span-1 row-span-1" },
   { src: productTable, alt: "Trpezarijski sto od punog drveta", span: "col-span-2 row-span-1" },
   { src: craftingHands, alt: "Ruke majstora na poslu", span: "col-span-1 row-span-1" },
 ];
