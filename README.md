@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# Arte Legno Experience
 
-## Project info
+React/Vite sajt za Arte Legno sa kontakt formom i newsletter prijavom.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Kako forme sada rade
 
-## How can I edit this code?
+Frontend i dalje salje na iste rute:
 
-There are several ways of editing your application.
+- `/api/contact`
+- `/api/newsletter`
 
-**Use Lovable**
+Ali slanje vise ne zavisi od SMTP/Nodemailer servera. Umjesto toga:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- lokalno `server/index.js` prima zahtjeve i salje email preko Resend API-ja
+- na Cloudflare Pages produkciji iste rute rade kroz `functions/api/*`
 
-Changes made via Lovable will be committed automatically to this repo.
+To znaci da aplikacija moze biti deployana na Cloudflare Pages bez zasebnog Node servera.
 
-**Use your preferred IDE**
+## Lokalni razvoj
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+1. Instalirajte zavisnosti:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Napravite `.env.local` na osnovu `.env.example`
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Pokrenite frontend:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. U drugom terminalu pokrenite lokalni API:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run dev:api
+```
 
-**Use GitHub Codespaces**
+Frontend ce u developmentu slati na lokalni Express API preko Vite proxy-ja.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Cloudflare Pages deploy
 
-## What technologies are used for this project?
+Na Cloudflare Pages:
 
-This project is built with:
+- build command: `npm run build`
+- build output directory: `dist`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Dodajte ove secret / environment varijable u Pages projektu:
 
-## How can I deploy this project?
+- `RESEND_API_KEY`
+- `CONTACT_FORM_RECIPIENT`
+- `NEWSLETTER_FORM_RECIPIENT`
+- `CONTACT_FORM_SENDER`
+- `NEWSLETTER_FORM_SENDER`
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+`*_SENDER` treba da bude verified adresa na `atlagic.org`, a `*_RECIPIENT` moze biti bilo koji stvarni inbox na koji zelite da stizu poruke.
 
-## Can I connect a custom domain to my Lovable project?
+## DNS i slanje sa domena `atlagic.org`
 
-Yes, you can!
+Da bi slanje radilo sa adresa kao `website@atlagic.org` ili `newsletter@atlagic.org`, domen za slanje mora biti verifikovan u Resend-u.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Prakticni redoslijed:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. U Namecheap-u postaviti Cloudflare nameservere za `atlagic.org`.
+2. Dodati `atlagic.org` kao sending domain u Resend.
+3. Upisati DNS zapise koje Resend trazi.
+4. Kad domen postane verified, postaviti sender adrese u Cloudflare Pages secrets.
+
+## Napomena
+
+Ako zelite, sljedeci korak mogu odmah uraditi i:
+
+- pripremu `wrangler` konfiguracije za laksi Cloudflare preview
+- zamjenu Resend-a nekim drugim providerom
+- dodavanje cuvanja newsletter prijava u bazu ili mailing listu umjesto samo slanja na email

@@ -6,43 +6,32 @@ type SubmissionOptions = {
 };
 
 const trimEnv = (value: string | undefined) => value?.trim() || "";
+const trimField = (value: string | undefined) => value?.trim() || "";
 
 const resolveEndpoint = (kind: FormKind) => {
+  const sharedEndpoint = trimEnv(import.meta.env.VITE_FORM_ENDPOINT);
+
   if (kind === "contact") {
-    return trimEnv(import.meta.env.VITE_CONTACT_FORM_ENDPOINT) || "/api/contact";
+    return trimEnv(import.meta.env.VITE_CONTACT_FORM_ENDPOINT) || sharedEndpoint || "/api/contact";
   }
 
-  return trimEnv(import.meta.env.VITE_NEWSLETTER_FORM_ENDPOINT) || "/api/newsletter";
+  return trimEnv(import.meta.env.VITE_NEWSLETTER_FORM_ENDPOINT) || sharedEndpoint || "/api/newsletter";
 };
 
 const buildPayload = ({ kind, fields }: SubmissionOptions) => {
-  const basePayload: Record<string, string> = {
-    ...fields,
-    _captcha: "false",
-    _template: "table",
-    _subject:
-      kind === "contact"
-        ? `Arte Legno kontakt: ${fields.subject || "Nova poruka"}`
-        : "Arte Legno newsletter prijava",
+  const trimmedFields = Object.fromEntries(
+    Object.entries(fields).map(([key, value]) => [key, trimField(value)]),
+  );
+
+  return {
+    ...trimmedFields,
     formType: kind,
   };
-
-  if (fields.email) {
-    basePayload._replyto = fields.email;
-  }
-
-  return basePayload;
 };
 
 const mapProviderErrorMessage = (message?: string) => {
   if (!message) {
     return "Slanje forme nije uspjelo.";
-  }
-
-  const normalizedMessage = message.toLowerCase();
-
-  if (normalizedMessage.includes("needs activation") || normalizedMessage.includes("activate form")) {
-    return "Forma jos nije aktivirana. Otvorite inbox adrese za prijem poruka i kliknite na 'Activate Form' email koji je FormSubmit poslao.";
   }
 
   return message;
@@ -62,11 +51,15 @@ export async function submitWebsiteForm(options: SubmissionOptions) {
     });
   } catch (error) {
     if (options.kind === "contact") {
-      throw new Error("Kontakt API nije dostupan. Pokrenite `npm run dev:api` i provjerite SMTP postavke u `.env.local`.");
+      throw new Error(
+        "Kontakt servis nije dostupan. Lokalno pokrenite `npm run dev:api` ili podesite `VITE_CONTACT_FORM_ENDPOINT`.",
+      );
     }
 
     if (options.kind === "newsletter") {
-      throw new Error("Newsletter API nije dostupan. Pokrenite `npm run dev:api` i provjerite SMTP postavke u `.env.local`.");
+      throw new Error(
+        "Newsletter servis nije dostupan. Lokalno pokrenite `npm run dev:api` ili podesite `VITE_NEWSLETTER_FORM_ENDPOINT`.",
+      );
     }
 
     throw new Error(error instanceof Error ? error.message : "Slanje forme nije uspjelo.");
@@ -85,11 +78,11 @@ export async function submitWebsiteForm(options: SubmissionOptions) {
 
   if (!response.ok || data?.success === false || data?.success === "false") {
     if (options.kind === "contact" && !data?.message) {
-      throw new Error("Kontakt API je odgovorio greskom. Provjerite da li je backend pokrenut i da li je SMTP ispravno podesen.");
+      throw new Error("Kontakt servis je odgovorio greskom. Provjerite konfiguraciju email servisa.");
     }
 
     if (options.kind === "newsletter" && !data?.message) {
-      throw new Error("Newsletter API je odgovorio greskom. Provjerite da li je backend pokrenut i da li je SMTP ispravno podesen.");
+      throw new Error("Newsletter servis je odgovorio greskom. Provjerite konfiguraciju email servisa.");
     }
 
     throw new Error(mapProviderErrorMessage(data?.message));
