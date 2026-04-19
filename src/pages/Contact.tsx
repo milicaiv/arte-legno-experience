@@ -5,7 +5,7 @@ import { submitWebsiteForm } from "@/lib/form-submission";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Instagram, Facebook, Mail, MapPin } from "lucide-react";
-import workshopImage from "@/assets/workshop-interior.jpg";
+import { kitchenBoard } from "@/data/portfolioImages";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -162,9 +162,12 @@ const Contact = () => {
             <AnimatedSection delay={0.2} className="space-y-12">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src={workshopImage}
-                  alt="Naša radionica"
+                  src={kitchenBoard.src}
+                  alt={kitchenBoard.alt}
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: kitchenBoard.objectPosition }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

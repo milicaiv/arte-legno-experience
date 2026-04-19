@@ -1,9 +1,11 @@
-import woodTexture from "@/assets/wood-texture-1.jpg";
-import workshopInterior from "@/assets/workshop-interior.jpg";
-import craftingHands from "@/assets/crafting-hands.jpg";
-import productBowl from "@/assets/product-bowl.jpg";
-import productTable from "@/assets/product-table.jpg";
-import heroWorkshop from "@/assets/hero-workshop.jpg";
+import {
+  brandSignature,
+  carvedIcon,
+  executiveWorkspace,
+  gardenBench,
+  kitchenBoard,
+  livingRoomInterior,
+} from "@/data/portfolioImages";
 
 export interface BlogPost {
   image: string;
@@ -20,7 +22,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    image: woodTexture,
+    image: brandSignature.src,
     category: "Filozofija",
     title: "Jezik teksture drveta",
     excerpt: "Razumijevanje priča koje svaki komad drveta nosi u svojim šarama i načina na koji ih učimo čitati.",
@@ -52,7 +54,7 @@ Sto koji izrađujem od hrasta starog dvjesta godina nosi u sebi dva vijeka histo
 To je ljepota ručnog zanata: ne stvaramo samo predmete, već prenosimo priče iz jednog oblika u drugi, iz šume u dom, iz prirode u svakodnevni život.`,
   },
   {
-    image: workshopInterior,
+    image: executiveWorkspace.src,
     category: "Iza scene",
     title: "Dan u radionici",
     excerpt: "Ritam ručnog zanata, od prvog svjetla zore do posljednjeg poliranja dana.",
@@ -81,7 +83,7 @@ Ručni zanat ne trpi žurbu. Svaki rez mora biti promišljen, a svaki potez prec
 Kada se sunce spusti, pospremim alate i očistim radni prostor. Posljednje poliranje dana, ne predmeta nego samog stola, ritual je koji zatvara krug. Radionica se vraća u tišinu, čekajući novo jutro i nove priče.`,
   },
   {
-    image: craftingHands,
+    image: gardenBench.src,
     category: "Održivost",
     title: "Poštovanje ritma prirode",
     excerpt: "Zašto su sporo zanatstvo i održivost neodvojive vrijednosti u našoj praksi.",
@@ -110,7 +112,7 @@ Ova filozofija zahtijeva kreativnost i planiranje, ali rezultat je osjećaj cjel
 Najveći doprinos održivosti jeste stvaranje predmeta koji traju. Komad namještaja koji služi generacijama zamjenjuje desetine jeftinih proizvoda koji završe na deponiji. Kvalitet je, u konačnici, najodrživiji izbor.`,
   },
   {
-    image: productBowl,
+    image: kitchenBoard.src,
     category: "Proces izrade",
     title: "Umjetnost struganja drveta",
     excerpt: "Meditativna praksa koja pretvara sirovu građu u tečne, organske forme.",
@@ -135,7 +137,7 @@ Najzadovoljniji trenutak dolazi na kraju, kada gruba forma prođe kroz faze bru�
 Svaka posuda je jedinstvena. Čak i kada radim seriju, svaki komad ima svoj karakter, svoju priču i svoju ljepotu. To je dar ručnog zanata, nemogućnost ponavljanja.`,
   },
   {
-    image: productTable,
+    image: livingRoomInterior.src,
     category: "Filozofija",
     title: "Stolovi koji okupljaju",
     excerpt: "O dizajniranju namještaja koji postaje srce porodičnog života i razgovora.",
@@ -160,7 +162,7 @@ Rub stola je mjesto gdje se ruke najčešće odmaraju. Zato mu posvećujem poseb
 Površina stola treba da poziva na dodir. Drvo koje je pravilno obrađeno i nauljeno ima toplinu koju nijedan drugi materijal ne može ponuditi. To je toplina koja poziva ljude da sjednu, ostanu i dijele zajedničke trenutke.`,
   },
   {
-    image: heroWorkshop,
+    image: carvedIcon.src,
     category: "Iza scene",
     title: "Alati zanata",
     excerpt: "Ručni alati prenošeni kroz generacije i njihova nezamjenjiva uloga.",

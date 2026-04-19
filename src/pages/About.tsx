@@ -3,11 +3,15 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import founderImage from "@/assets/founder-portrait.jpg";
-import workshopImage from "@/assets/workshop-interior.jpg";
-import craftingHands from "@/assets/crafting-hands.jpg";
-import productTable from "@/assets/product-table.jpg";
-import productBowl from "@/assets/product-bowl.jpg";
 import { TreeDeciduous, Compass, Hand, Sparkles, Shield } from "lucide-react";
+import {
+  carvedIcon,
+  gardenBench,
+  kitchenBoard,
+  kitchenShelving,
+  livingRoomInterior,
+  mediaConsole,
+} from "@/data/portfolioImages";
 
 const services = [
   {
@@ -119,9 +123,12 @@ const About = () => {
             <AnimatedSection>
               <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  src={workshopImage}
-                  alt="Radionica gdje je sve počelo"
+                  src={carvedIcon.src}
+                  alt={carvedIcon.alt}
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: carvedIcon.objectPosition }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </AnimatedSection>
@@ -212,9 +219,16 @@ const About = () => {
 
       <section className="py-4 bg-background overflow-hidden">
         <div className="flex gap-4 animate-[slide_30s_linear_infinite]">
-          {[productTable, craftingHands, productBowl, workshopImage].map((img, index) => (
+          {[kitchenShelving, livingRoomInterior, mediaConsole, kitchenBoard, gardenBench].map((image, index) => (
             <div key={index} className="flex-shrink-0 w-80 h-60 overflow-hidden">
-              <img src={img} alt="Zanatstvo" className="w-full h-full object-cover" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+                style={{ objectPosition: image.objectPosition }}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           ))}
         </div>
