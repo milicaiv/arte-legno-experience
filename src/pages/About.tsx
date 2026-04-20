@@ -1,8 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import founderImage from "@/assets/founder-portrait.jpg";
+import founderImage from "@/assets/founder-portrait.png";
 import { TreeDeciduous, Compass, Hand, Sparkles, Shield } from "lucide-react";
 import {
   carvedIcon,
@@ -67,6 +74,14 @@ const process = [
     title: "Završna obrada",
     description: "Prirodna ulja i završni slojevi štite površinu i ističu ljepotu koja traje godinama.",
   },
+];
+
+const aboutGalleryImages = [
+  kitchenShelving,
+  livingRoomInterior,
+  mediaConsole,
+  kitchenBoard,
+  gardenBench,
 ];
 
 const About = () => {
@@ -217,20 +232,31 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-4 bg-background overflow-hidden">
-        <div className="flex gap-4 animate-[slide_30s_linear_infinite]">
-          {[kitchenShelving, livingRoomInterior, mediaConsole, kitchenBoard, gardenBench].map((image, index) => (
-            <div key={index} className="flex-shrink-0 w-80 h-60 overflow-hidden">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-                style={{ objectPosition: image.objectPosition }}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          ))}
+      <section className="py-6 bg-background">
+        <div className="container-wide px-6 md:px-12 lg:px-24">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full px-10 sm:px-14">
+            <CarouselContent>
+              {aboutGalleryImages.map((image) => (
+                <CarouselItem
+                  key={image.title}
+                  className="basis-[88%] sm:basis-[60%] lg:basis-[38%] xl:basis-[32%]"
+                >
+                  <div className="h-60 overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: image.objectPosition }}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 h-11 w-11 border-border bg-background/92 shadow-md sm:left-3" />
+            <CarouselNext className="right-2 h-11 w-11 border-border bg-background/92 shadow-md sm:right-3" />
+          </Carousel>
         </div>
       </section>
 

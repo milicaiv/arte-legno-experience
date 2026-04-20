@@ -1,6 +1,6 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
-import founderImage from "@/assets/founder-portrait.jpg";
+import founderImage from "@/assets/founder-portrait.png";
 
 export const AboutPreview = () => {
   return (
