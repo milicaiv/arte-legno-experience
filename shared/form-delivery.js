@@ -4,10 +4,10 @@ const NEWSLETTER_REQUIRED_FIELDS = ["email"];
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const CONTACT_SUBJECT_LABELS = {
-  "custom-furniture": "Namjestaj po mjeri",
-  "art-objects": "Umjetnicki drveni predmeti",
+  "custom-furniture": "Namještaj po mjeri",
+  "art-objects": "Umjetnički drveni predmeti",
   "interior-design": "Enterijerski dizajn od drveta",
-  gifts: "Rucni pokloni",
+  gifts: "Ručni pokloni",
   other: "Ostali upiti",
 };
 
@@ -29,11 +29,11 @@ const toPublicErrorMessage = (providerMessage) => {
   const normalizedMessage = trimValue(providerMessage).toLowerCase();
 
   if (!normalizedMessage) {
-    return "Email servis trenutno nije dostupan. Pokusajte ponovo za nekoliko trenutaka.";
+    return "Email servis trenutno nije dostupan. Pokušajte ponovo za nekoliko trenutaka.";
   }
 
   if (normalizedMessage.includes("rate limit")) {
-    return "Servis za slanje je trenutno zauzet. Pokusajte ponovo za nekoliko trenutaka.";
+    return "Servis za slanje je trenutno zauzet. Pokušajte ponovo za nekoliko trenutaka.";
   }
 
   if (
@@ -43,10 +43,10 @@ const toPublicErrorMessage = (providerMessage) => {
     normalizedMessage.includes("domain is not verified") ||
     normalizedMessage.includes("verify a domain")
   ) {
-    return "Email servis nije ispravno konfigurisan. Provjerite Resend kljuc i verifikaciju domena.";
+    return "Email servis nije ispravno konfigurisan. Provjerite Resend ključ i verifikaciju domena.";
   }
 
-  return "Slanje nije uspjelo. Pokusajte ponovo za nekoliko trenutaka.";
+  return "Slanje nije uspjelo. Pokušajte ponovo za nekoliko trenutaka.";
 };
 
 const createJsonHeaders = () => ({
@@ -144,7 +144,7 @@ const assertResendConfig = (env) => {
   if (!apiKey) {
     throw new SubmissionError(
       500,
-      "Email servis nije konfigurisan. Dodajte RESEND_API_KEY u okruzenje.",
+      "Email servis nije konfigurisan. Dodajte RESEND_API_KEY u okruženje.",
     );
   }
 
