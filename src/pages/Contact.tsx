@@ -178,8 +178,8 @@ const Contact = () => {
                   <div>
                     <p className="body-regular text-foreground">ATLAGIĆ - ARTE LEGNO</p>
                     <p className="body-regular text-muted-foreground">
-                      Ulica Majstora 42<br />
-                      11000 Beograd, Srbija
+                      Marka Lipovca 64<br />
+                      78000 Banja Luka, Bosna i Hercegovina
                     </p>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ const Contact = () => {
                     <Facebook size={20} className="text-foreground" />
                   </a>
                   <a
-                    href="mailto:hello@atlagic-artelegno.com"
+                    href="mailto:atlagicartelegno@gmail.com"
                     className="p-3 border border-border hover:border-primary transition-colors duration-300"
                     aria-label="Email"
                   >

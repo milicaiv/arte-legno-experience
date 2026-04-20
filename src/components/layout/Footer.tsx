@@ -59,7 +59,7 @@ export const Footer = () => {
                 <Facebook size={18} />
               </a>
               <a
-                href="mailto:hello@atlagic-artelegno.com"
+                href="mailto:atlagicartelegno@gmail.com"
                 className="p-2 border border-primary-foreground/30 hover:border-primary-foreground transition-colors duration-300"
                 aria-label="Email"
               >
@@ -67,7 +67,7 @@ export const Footer = () => {
               </a>
             </div>
             <p className="body-regular text-primary-foreground/60 text-sm">
-              hello@atlagic-artelegno.com
+              atlagicartelegno@gmail.com
             </p>
           </div>
         </div>
