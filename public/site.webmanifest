@@ -1,6 +1,9 @@
 {
   "name": "ATLAGIĆ - ARTE LEGNO",
   "short_name": "ATLAGIĆ",
+  "description": "Ručna izrada drvenog namještaja i umjetničkih predmeta u Banjoj Luci.",
+  "lang": "bs-BA",
+  "id": "/",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8f5f0",
@@ -14,6 +17,11 @@
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-256x256.png",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ]

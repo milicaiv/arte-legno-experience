@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import founderImage from "@/assets/founder-portrait.png";
 import { TreeDeciduous, Compass, Hand, Sparkles, Shield } from "lucide-react";
+import { Seo } from "@/components/seo/Seo";
+import { SITE_NAME, buildAbsoluteUrl, buildOrganizationSchema } from "@/lib/seo";
 import {
   carvedIcon,
   gardenBench,
@@ -86,7 +88,34 @@ const aboutGalleryImages = [
 
 const About = () => {
   return (
-    <Layout>
+    <>
+      <Seo
+        title={`O nama | ${SITE_NAME}`}
+        description="Saznajte kako ATLAGIĆ - ARTE LEGNO u Banjoj Luci spaja porodični zanat, održivo drvo i savremeni dizajn u unikatne komade po mjeri."
+        path="/about"
+        image={founderImage}
+        imageAlt="Portret osnivača ATLAGIĆ - ARTE LEGNO radionice"
+        keywords={[
+          "o nama ATLAGIĆ ARTE LEGNO",
+          "drvodjeljski zanat Banja Luka",
+          "ručna izrada drveta",
+          "održivi drveni namještaj",
+          "porodična radionica",
+        ]}
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: `O nama | ${SITE_NAME}`,
+            url: buildAbsoluteUrl("/about"),
+            description:
+              "Priča o radionici ATLAGIĆ - ARTE LEGNO, zanatskoj filozofiji i procesu ručne izrade u Banjoj Luci.",
+            inLanguage: "bs-BA",
+            about: buildOrganizationSchema(),
+          },
+        ]}
+      />
+      <Layout>
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -279,7 +308,8 @@ const About = () => {
           </AnimatedSection>
         </div>
       </section>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

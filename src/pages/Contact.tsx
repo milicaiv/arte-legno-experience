@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Instagram, Facebook, Mail, MapPin } from "lucide-react";
 import { kitchenBoard } from "@/data/portfolioImages";
+import { Seo } from "@/components/seo/Seo";
+import { CONTACT_EMAIL, SITE_NAME, buildAbsoluteUrl } from "@/lib/seo";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +51,44 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <>
+      <Seo
+        title={`Kontakt | ${SITE_NAME}`}
+        description="Kontaktirajte ATLAGIĆ - ARTE LEGNO za drveni namještaj po mjeri, umjetničke drvene predmete i dogovor za radionicu u Banjoj Luci."
+        path="/contact"
+        image={kitchenBoard.src}
+        imageAlt={kitchenBoard.alt}
+        keywords={[
+          "kontakt ATLAGIĆ ARTE LEGNO",
+          "namještaj po mjeri Banja Luka",
+          "radionica drvodjeljstvo",
+          "umjetnički drveni predmeti kontakt",
+        ]}
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: `Kontakt | ${SITE_NAME}`,
+            url: buildAbsoluteUrl("/contact"),
+            description:
+              "Kontakt stranica radionice ATLAGIĆ - ARTE LEGNO sa formom upita i adresom u Banjoj Luci.",
+            inLanguage: "bs-BA",
+            mainEntity: {
+              "@type": "Organization",
+              name: SITE_NAME,
+              email: `mailto:${CONTACT_EMAIL}`,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Marka Lipovca 64",
+                addressLocality: "Banja Luka",
+                postalCode: "78000",
+                addressCountry: "BA",
+              },
+            },
+          },
+        ]}
+      />
+      <Layout>
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <motion.div
@@ -229,7 +268,8 @@ const Contact = () => {
           </AnimatedSection>
         </div>
       </section>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

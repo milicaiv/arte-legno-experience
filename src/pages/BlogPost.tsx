@@ -4,6 +4,8 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { motion } from "framer-motion";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
+import { Seo } from "@/components/seo/Seo";
+import { SITE_NAME, buildAbsoluteUrl } from "@/lib/seo";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -11,7 +13,14 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <Layout>
+      <>
+        <Seo
+          title={`Članak nije pronađen | ${SITE_NAME}`}
+          description="Traženi blog članak nije pronađen. Vratite se na blog ATLAGIĆ - ARTE LEGNO i pregledajte dostupne priče iz radionice."
+          path="/blog"
+          robots="noindex, nofollow"
+        />
+        <Layout>
         <section className="pt-32 pb-20 bg-background min-h-screen">
           <div className="container-narrow px-6 md:px-12 text-center">
             <h1 className="heading-section text-foreground mb-4">Članak nije pronađen</h1>
@@ -27,7 +36,8 @@ const BlogPost = () => {
             </Link>
           </div>
         </section>
-      </Layout>
+        </Layout>
+      </>
     );
   }
 
@@ -52,7 +62,50 @@ const BlogPost = () => {
   };
 
   return (
-    <Layout>
+    <>
+      <Seo
+        title={`${post.title} | Blog | ${SITE_NAME}`}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        image={post.image}
+        imageAlt={post.title}
+        type="article"
+        author={post.author}
+        section={post.category}
+        keywords={[
+          post.title,
+          post.category,
+          "blog ATLAGIĆ ARTE LEGNO",
+          "ručna obrada drveta",
+          "drvodjeljski zanat",
+        ]}
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            image: buildAbsoluteUrl(post.image),
+            author: {
+              "@type": "Person",
+              name: post.author,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: SITE_NAME,
+              logo: {
+                "@type": "ImageObject",
+                url: buildAbsoluteUrl("/favicon-256x256.png"),
+              },
+            },
+            mainEntityOfPage: buildAbsoluteUrl(`/blog/${post.slug}`),
+            url: buildAbsoluteUrl(`/blog/${post.slug}`),
+            articleSection: post.category,
+            inLanguage: "bs-BA",
+          },
+        ]}
+      />
+      <Layout>
       <section className="pt-32 pb-4 bg-background">
         <div className="container-narrow px-6 md:px-12 lg:px-24">
           <motion.div
@@ -150,7 +203,8 @@ const BlogPost = () => {
           </AnimatedSection>
         </div>
       </section>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

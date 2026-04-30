@@ -6,6 +6,8 @@ import { submitWebsiteForm } from "@/lib/form-submission";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
+import { Seo } from "@/components/seo/Seo";
+import { SITE_NAME, buildAbsoluteUrl } from "@/lib/seo";
 
 const categories = ["Sve", "Filozofija", "Iza scene", "Održivost", "Proces izrade"];
 
@@ -49,7 +51,38 @@ const Blog = () => {
   };
 
   return (
-    <Layout>
+    <>
+      <Seo
+        title={`Blog o drvetu i zanatu | ${SITE_NAME}`}
+        description="Čitajte priče iz radionice ATLAGIĆ - ARTE LEGNO o ručnoj obradi drveta, održivosti, dizajnu namještaja i sporom zanatu iz Banje Luke."
+        path="/blog"
+        image={featuredPost?.image}
+        imageAlt={featuredPost?.title}
+        keywords={[
+          "blog o drvetu",
+          "ručna obrada drveta",
+          "drvodjeljstvo Banja Luka",
+          "održivi namještaj",
+          "zanat i dizajn",
+        ]}
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: `Blog | ${SITE_NAME}`,
+            url: buildAbsoluteUrl("/blog"),
+            description:
+              "Blog ATLAGIĆ - ARTE LEGNO sa tekstovima o drvetu, zanatu, procesu izrade i održivosti.",
+            inLanguage: "bs-BA",
+            blogPost: blogPosts.map((post) => ({
+              "@type": "BlogPosting",
+              headline: post.title,
+              url: buildAbsoluteUrl(`/blog/${post.slug}`),
+            })),
+          },
+        ]}
+      />
+      <Layout>
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-background">
         <div className="container-wide px-6 md:px-12 lg:px-24">
           <motion.div
@@ -202,7 +235,8 @@ const Blog = () => {
           </AnimatedSection>
         </div>
       </section>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 
