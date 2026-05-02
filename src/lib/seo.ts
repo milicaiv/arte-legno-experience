@@ -2,6 +2,7 @@ export const SITE_NAME = "ATLAGIĆ - ARTE LEGNO";
 export const SITE_URL = "https://atlagic.org";
 export const CONTACT_EMAIL = "atlagicartelegno@gmail.com";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const BRAND_ICON_URL = `${SITE_URL}/apple-touch-icon.png?v=20260502`;
 export const DEFAULT_ROBOTS =
   "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 export const DEFAULT_THEME_COLOR = "#6f4a2d";
@@ -23,7 +24,7 @@ export const buildOrganizationSchema = (overrides: JsonLdObject = {}): JsonLdObj
   "@type": "Organization",
   name: SITE_NAME,
   url: SITE_URL,
-  logo: buildAbsoluteUrl("/favicon-256x256.png"),
+  logo: BRAND_ICON_URL,
   image: DEFAULT_OG_IMAGE,
   email: `mailto:${CONTACT_EMAIL}`,
   address: {

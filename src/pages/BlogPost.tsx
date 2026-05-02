@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Seo } from "@/components/seo/Seo";
-import { SITE_NAME, buildAbsoluteUrl } from "@/lib/seo";
+import { BRAND_ICON_URL, SITE_NAME, buildAbsoluteUrl } from "@/lib/seo";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -95,7 +95,7 @@ const BlogPost = () => {
               name: SITE_NAME,
               logo: {
                 "@type": "ImageObject",
-                url: buildAbsoluteUrl("/favicon-256x256.png"),
+                url: BRAND_ICON_URL,
               },
             },
             mainEntityOfPage: buildAbsoluteUrl(`/blog/${post.slug}`),

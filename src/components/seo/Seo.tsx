@@ -105,12 +105,14 @@ export const Seo = ({
     const resolvedImage = resolveAbsoluteAssetUrl(image);
     const normalizedSchema = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 
-    document.documentElement.lang = "bs";
+    document.documentElement.lang = "bs-BA";
     document.title = title;
 
     upsertMetaTag("name", "description", description);
     upsertMetaTag("name", "keywords", keywords.length > 0 ? keywords.join(", ") : null);
     upsertMetaTag("name", "author", author);
+    upsertMetaTag("name", "application-name", SITE_NAME);
+    upsertMetaTag("name", "apple-mobile-web-app-title", SITE_NAME);
     upsertMetaTag("name", "robots", robots);
     upsertMetaTag("name", "theme-color", DEFAULT_THEME_COLOR);
     upsertMetaTag("property", "og:locale", "bs_BA");
